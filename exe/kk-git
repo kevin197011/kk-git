@@ -1,0 +1,99 @@
+#!/usr/bin/env ruby
+# frozen_string_literal: true
+
+require 'optparse'
+require 'json'
+
+begin
+  require 'kk/git'
+rescue LoadError
+  require_relative '../lib/kk/git'
+end
+
+options = {
+  mode: :staged,
+  format: :text,
+  include_body: true,
+  repo_dir: '.',
+  type: nil,
+  scope: nil,
+  subject: nil,
+  detect_breaking: true
+}
+
+parser = OptionParser.new do |opts|
+  opts.banner = "Usage: kk-git commit-message [options]\n\n根据当前 Git repo 变更生成 Conventional Commit 信息。"
+
+  opts.on('--repo DIR', '指定 repo 目录（默认当前目录）') { |v| options[:repo_dir] = v }
+
+  opts.on('--staged', '仅基于暂存区变更（默认）') { options[:mode] = :staged }
+  opts.on('--worktree', '仅基于工作区变更（含 untracked）') { options[:mode] = :worktree }
+  opts.on('--all', '合并暂存区与工作区变更') { options[:mode] = :all }
+
+  opts.on('--[no-]body', '多文件时输出/不输出 body（默认输出）') { |v| options[:include_body] = v }
+
+  opts.on('--type TYPE', '覆盖自动推断的 type（如 feat/fix/docs）') { |v| options[:type] = v }
+  opts.on('--scope SCOPE', '覆盖自动推断的 scope') { |v| options[:scope] = v }
+  opts.on('--subject SUBJECT', '覆盖自动推断的 subject') { |v| options[:subject] = v }
+  opts.on('--[no-]detect-breaking', '是否检测 BREAKING 标记（默认检测）') { |v| options[:detect_breaking] = v }
+
+  opts.on('--format FORMAT', '输出格式：text/json（默认 text）') do |v|
+    options[:format] = v.to_s.downcase.to_sym
+  end
+
+  opts.on('-h', '--help', '显示帮助') do
+    puts opts
+    exit 0
+  end
+end
+
+subcommand = ARGV.shift
+if subcommand != 'commit-message'
+  warn "未知命令: #{subcommand}\n\n#{parser}"
+  exit 2
+end
+
+parser.parse!(ARGV)
+
+def to_utf8(str)
+  return nil if str.nil?
+  s = str.to_s.dup
+  # ARGV 在不同 locale 下可能被标记为 ASCII-8BIT/US-ASCII，但字节本身通常是 UTF-8。
+  # 这里优先按 UTF-8 解释字节，并对非法序列做 scrub。
+  s.force_encoding(Encoding::UTF_8)
+  s.scrub('�')
+end
+
+options[:type] = to_utf8(options[:type])
+options[:scope] = to_utf8(options[:scope])
+options[:subject] = to_utf8(options[:subject])
+
+result =
+  if options[:format] == :json
+    KKGit::CommitMessage.generate_hash(
+      repo_dir: options[:repo_dir],
+      mode: options[:mode],
+      include_body: options[:include_body],
+      type_override: options[:type],
+      scope_override: options[:scope],
+      subject_override: options[:subject],
+      detect_breaking: options[:detect_breaking]
+    )
+  else
+    KKGit::CommitMessage.generate(
+      repo_dir: options[:repo_dir],
+      mode: options[:mode],
+      include_body: options[:include_body],
+      type_override: options[:type],
+      scope_override: options[:scope],
+      subject_override: options[:subject],
+      detect_breaking: options[:detect_breaking]
+    )
+  end
+
+if result.nil? || (result.is_a?(Hash) && result[:empty])
+  exit 1
+end
+
+puts(options[:format] == :json ? JSON.pretty_generate(result) : result)
+
