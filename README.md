@@ -1,9 +1,42 @@
 # kk-git
-kk-git
+
+[![Gem Version](https://img.shields.io/gem/v/kk-git.svg)](https://rubygems.org/gems/kk-git)
+[![Gem Downloads](https://img.shields.io/gem/dt/kk-git.svg)](https://rubygems.org/gems/kk-git)
+
+## 安装（RubyGems）
+
+### 方式 1：全局安装（推荐）
+
+```bash
+gem install kk-git
+```
+
+安装后可直接使用命令 `kk-git`。
+
+### 查看已安装版本
+
+```bash
+kk-git --version
+```
+
+### 方式 2：加入项目依赖
+
+```ruby
+# Gemfile
+gem 'kk-git'
+```
 
 ## 自动生成 commit message（Conventional Commits）
 
 ### CLI 使用
+
+已安装 gem 的情况下：
+
+```bash
+kk-git commit-message --worktree
+kk-git commit-message --staged
+kk-git commit-message --all
+```
 
 在本仓库内直接运行（不需要先安装 gem）：
 
@@ -16,13 +49,13 @@ ruby -Ilib exe/kk-git commit-message --all
 覆盖自动推断（手动指定 type/scope/subject）：
 
 ```bash
-ruby -Ilib exe/kk-git commit-message --worktree --type chore --scope tools --subject "维护工具"
+kk-git commit-message --worktree --type chore --scope tools --subject "维护工具"
 ```
 
 输出 JSON（方便脚本消费）：
 
 ```bash
-ruby -Ilib exe/kk-git commit-message --worktree --format json
+kk-git commit-message --worktree --format json
 ```
 
 ### Rake 调用

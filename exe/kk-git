@@ -22,7 +22,10 @@ options = {
 }
 
 parser = OptionParser.new do |opts|
-  opts.banner = "Usage: kk-git commit-message [options]\n\n根据当前 Git repo 变更生成 Conventional Commit 信息。"
+  opts.banner = "Usage:\n" \
+                "  kk-git --version\n" \
+                "  kk-git commit-message [options]\n\n" \
+                "根据当前 Git repo 变更生成 Conventional Commit 信息。"
 
   opts.on('--repo DIR', '指定 repo 目录（默认当前目录）') { |v| options[:repo_dir] = v }
 
@@ -45,6 +48,17 @@ parser = OptionParser.new do |opts|
     puts opts
     exit 0
   end
+
+  opts.on('-v', '--version', '显示版本号') do
+    puts KKGit::VERSION
+    exit 0
+  end
+end
+
+# 支持 `kk-git --version` 这种无子命令形式
+if ['--version', '-v'].include?(ARGV[0])
+  puts KKGit::VERSION
+  exit 0
 end
 
 subcommand = ARGV.shift
