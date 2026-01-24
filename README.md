@@ -39,3 +39,23 @@ rake git:commit_message_all      # 合并暂存区+工作区
 - `KK_GIT_SCOPE`: 覆盖 scope
 - `KK_GIT_SUBJECT`: 覆盖 subject
 
+## 发布到 RubyGems（GitHub Actions）
+
+已提供工作流：`.github/workflows/release-gem.yml`
+
+### 1) 配置 Secret
+
+在 GitHub 仓库 `Settings -> Secrets and variables -> Actions` 新增：
+
+- `RUBYGEMS_API_KEY`: RubyGems 的 API key（建议启用 MFA 的 key）
+
+### 2) 打 tag 触发发布
+
+```bash
+# 例：发布 0.1.0
+git tag v0.1.0
+git push origin v0.1.0
+```
+
+也可以在 GitHub Actions 页面手动 `workflow_dispatch` 触发。
+
