@@ -68,15 +68,31 @@ require 'bundler/setup'
 require 'kk/git/rake_tasks'
 
 # 然后就可以直接调用：
-# Rake::Task['git:commit_message_all'].invoke
+# Rake::Task['git:auto_commit'].invoke
 ```
 
 ```bash
 rake git:commit_message          # 基于暂存区（默认）
 rake git:commit_message_worktree # 基于工作区（含 untracked）
-rake git:commit_message_all      # 合并暂存区+工作区
+rake git:auto_commit             # 合并暂存区+工作区（仅生成/输出 commit message）
 rake git:auto_commit_push        # 自动 add/commit/pull/push
 ```
+
+#### `git:auto_commit_push` 行为与配置
+
+执行顺序固定为：
+
+1) `git add .`  
+2) 生成 commit message（等价于调用 `git:auto_commit`）  
+3) `git commit`  
+4) `git pull`（默认 `--ff-only`，适合非交互环境）  
+5) `git push`
+
+可选环境变量：
+
+- `KK_GIT_REMOTE`: 远端名，默认 `origin`
+- `KK_GIT_BRANCH`: 分支名，默认当前分支
+- `KK_GIT_PULL_ARGS`: `git pull` 的参数字符串，默认 `--ff-only`（例如可设为 `--rebase`）
 
 ### 环境变量覆盖
 
@@ -92,7 +108,7 @@ rake git:auto_commit_push        # 自动 add/commit/pull/push
 
 在 GitHub 仓库 `Settings -> Secrets and variables -> Actions` 新增：
 
-- `RUBYGEMS_API_KEY`: RubyGems 的 API key（建议启用 MFA 的 key）
+- `RUBYGEMS_API_KEY`: RubyGems 的 API key（工作流会作为 `GEM_HOST_API_KEY` 注入到 `gem push`）
 
 ### 2) 打 tag 触发发布
 

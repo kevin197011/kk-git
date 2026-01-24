@@ -57,13 +57,13 @@ module KKGit
         end
 
         desc '合并暂存区+工作区变更生成 commit message'
-        task :commit_message_all do
+        task :auto_commit do
           msg = KKGit::CommitMessage.generate(mode: :all)
           ENV['KK_GIT_COMMIT_MESSAGE'] = msg.to_s
           puts msg if msg
         end
 
-        desc '自动 add/commit/pull/push（基于 git:commit_message_all）'
+        desc '自动 add/commit/pull/push（基于 git:auto_commit）'
         task :auto_commit_push do
           if working_tree_clean?
             puts '没有变更需要提交'
@@ -78,8 +78,8 @@ module KKGit
           ensure_ok!(ok, 'git add', stdout: out, stderr: err)
 
           # 2) 生成 commit message（允许重复 invoke）
-          Rake::Task['git:commit_message_all'].reenable
-          Rake::Task['git:commit_message_all'].invoke
+          Rake::Task['git:auto_commit'].reenable
+          Rake::Task['git:auto_commit'].invoke
           commit_message = ENV['KK_GIT_COMMIT_MESSAGE'].to_s.strip
           commit_message = "chore(repo): 更新项目文件\n\n#{Time.now}" if commit_message.empty?
 
