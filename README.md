@@ -60,6 +60,17 @@ kk-git commit-message --worktree --format json
 
 ### Rake 调用
 
+在其它仓库里使用（推荐）：
+
+```ruby
+# Rakefile
+require 'bundler/setup'
+require 'kk/git/rake_tasks'
+
+# 然后就可以直接调用：
+# Rake::Task['git:commit_message_all'].invoke
+```
+
 ```bash
 rake git:commit_message          # 基于暂存区（默认）
 rake git:commit_message_worktree # 基于工作区（含 untracked）
