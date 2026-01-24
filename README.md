@@ -75,6 +75,7 @@ require 'kk/git/rake_tasks'
 rake git:commit_message          # 基于暂存区（默认）
 rake git:commit_message_worktree # 基于工作区（含 untracked）
 rake git:commit_message_all      # 合并暂存区+工作区
+rake git:auto_commit_push        # 自动 add/commit/pull/push
 ```
 
 ### 环境变量覆盖
