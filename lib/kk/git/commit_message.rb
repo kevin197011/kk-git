@@ -4,13 +4,13 @@ require 'json'
 require 'open3'
 
 module KKGit
-  # 根据当前 repo 的变更生成 Conventional Commits 信息。
+  # Generate Conventional Commits messages from git changes.
   #
-  # - 支持暂存区（staged）和工作区（working tree）变更
-  # - 支持识别 untracked 文件
-  # - 输出格式："<type>(<scope>): <subject>\n\n<body>"
+  # - Supports staged and working-tree changes
+  # - Supports untracked files
+  # - Output format: "<type>(<scope>): <subject>\n\n<body>"
   class CommitMessage
-    # 变更条目（支持 rename/copy 的 old/new）
+    # Change entry (supports rename/copy old/new paths)
     Change = Struct.new(:status, :path, :old_path, :source, keyword_init: true)
 
     TYPE_PRIORITY = {
@@ -25,19 +25,19 @@ module KKGit
       'chore' => 9
     }.freeze
 
-    # 生成 commit message。
+    # Generate a commit message.
     #
-    # @param repo_dir [String] Git 仓库目录（默认当前目录）
-    # @param mode [Symbol] :staged（仅暂存区）/:worktree（仅工作区）/:all（两者合并）
-    # @param include_body [Boolean] 多文件时是否输出 body（文件列表）
-    # @param fallback_scope [String] 无法推断 scope 时的默认值
-    # @param type_override [String, nil] 强制指定 type（如 feat/fix/docs）
-    # @param scope_override [String, nil] 强制指定 scope
-    # @param subject_override [String, nil] 强制指定 subject
-    # @param detect_breaking [Boolean] 是否从 diff 中检测 BREAKING 标记并生成 "type(scope)!:"（默认 true）
-    # @param max_diff_bytes [Integer] diff 检测的最大字节数（防止超大仓库导致变慢）
+    # @param repo_dir [String] git repo directory (default: current dir)
+    # @param mode [Symbol] :staged / :worktree / :all
+    # @param include_body [Boolean] include body for multi-file changes
+    # @param fallback_scope [String] scope used when inference can't decide
+    # @param type_override [String, nil] force type (feat/fix/docs/...)
+    # @param scope_override [String, nil] force scope
+    # @param subject_override [String, nil] force subject
+    # @param detect_breaking [Boolean] detect "BREAKING" markers and emit "type(scope)!:" (default: true)
+    # @param max_diff_bytes [Integer] cap diff size for breaking detection
     #
-    # @return [String, nil] 无变更时返回 nil
+    # @return [String, nil] returns nil when there are no changes
     def self.generate(
       repo_dir: '.',
       mode: :staged,
@@ -69,7 +69,7 @@ module KKGit
       message
     end
 
-    # 生成结构化信息（便于脚本/CI 消费）。
+    # Generate structured data (useful for scripts/CI).
     #
     # @return [Hash]
     def self.generate_hash(
@@ -169,7 +169,7 @@ module KKGit
     end
 
     def self.normalize_and_dedup(changes)
-      # key 维度：new_path；同一路径可能在 staged + worktree 都出现
+      # Keyed by new_path; same path can show up in staged + worktree.
       dedup = {}
       changes.each do |c|
         next if c.path.nil? || c.path.strip.empty?
@@ -181,10 +181,10 @@ module KKGit
           next
         end
 
-        # 优先级：
-        # - staged 覆盖 worktree（更贴近即将提交的内容）
-        # - rename/copy 优先于普通修改
-        # - A(新增) 优先于 M
+        # Priority:
+        # - staged wins over worktree (closer to what will be committed)
+        # - rename/copy wins over plain modifications
+        # - A(add) wins over M(modify)
         priority = change_priority(c)
         existing_priority = change_priority(existing)
         dedup[key] = c if priority < existing_priority
@@ -212,16 +212,16 @@ module KKGit
 
     def self.run_git(args, repo_dir:)
       stdout, stderr, status = Open3.capture3('git', *args, chdir: repo_dir)
-      # Open3 返回的 stdout/stderr 可能是 ASCII-8BIT（BINARY），统一转为 UTF-8 避免拼接时报编码错误。
+      # Open3 stdout/stderr may be ASCII-8BIT (BINARY). Normalize to UTF-8 to avoid concat errors.
       stdout = stdout.to_s.encode(Encoding::UTF_8, invalid: :replace, undef: :replace, replace: '�')
       stderr = stderr.to_s.encode(Encoding::UTF_8, invalid: :replace, undef: :replace, replace: '�')
 
-      raise "git #{args.join(' ')} 失败: #{stderr.strip}" unless status.success?
+      raise "git #{args.join(' ')} failed: #{stderr.strip}" unless status.success?
 
       stdout
     end
 
-    # 推断 type/scope/subject（含 breaking 检测）
+    # Infer type/scope/subject (with optional breaking detection)
     #
     # @return [Hash] {:type,:scope,:subject,:breaking}
     def self.infer(changes:, repo_dir:, mode:, detect_breaking:, max_diff_bytes:, fallback_scope:)
@@ -243,14 +243,14 @@ module KKGit
       return fallback_scope if uniq.empty?
       return uniq.first if uniq.length == 1
 
-      # 多 scope 的时候，尽量选 repo；否则 fallback
+      # When multiple scopes exist, prefer "repo"; otherwise fallback.
       return 'repo' if uniq.include?('repo')
 
       fallback_scope
     end
 
     def self.infer_scope(paths, fallback_scope:)
-      # 工具/脚本类变更：尽量统一 scope 为 tools
+      # Tooling/script/build changes: prefer a stable scope
       if paths.any? && paths.all? { |p| tooling_path?(p) || doc_path?(p) || ci_path?(p) }
         return 'tools'
       end
@@ -261,7 +261,7 @@ module KKGit
       return uniq.first if uniq.length == 1
       return 'repo' if uniq.include?('repo')
 
-      # 多个顶层目录：统一落到 repo（避免 scope 过长/不稳定）
+      # Multiple top-level dirs: use repo to keep scope stable/short.
       'repo'
     end
 
@@ -277,7 +277,7 @@ module KKGit
     def self.infer_type(changes)
       paths = changes.map(&:path)
 
-      # 快速类别判断
+      # Fast paths
       only_docs = paths.all? { |p| doc_path?(p) }
       return 'docs' if only_docs
 
@@ -290,12 +290,12 @@ module KKGit
       only_deps = paths.all? { |p| deps_path?(p) }
       return 'chore' if only_deps
 
-      # 工具/脚本/构建相关：倾向 chore（即便新增代码文件）
+      # Tooling/script/build related: prefer chore (even if code is added)
       if paths.any? && paths.all? { |p| tooling_path?(p) || doc_path?(p) || ci_path?(p) || deps_path?(p) }
         return 'chore'
       end
 
-      # 代码变更的启发式：新增更偏 feat；否则若命中 fix 关键词则 fix；否则 refactor/chore
+      # Heuristics for code changes
       has_code = paths.any? { |p| code_path?(p) }
       has_new_code = changes.any? { |c| c.status == 'A' && code_path?(c.path) }
       has_fix_keyword = paths.any? { |p| p.match?(/fix|bug|error|issue/i) }
@@ -305,7 +305,7 @@ module KKGit
       return 'fix' if has_code && has_fix_keyword
       return 'refactor' if has_code && has_delete
 
-      # 混合场景：按优先级聚合
+      # Mixed: aggregate by priority
       types = changes.map { |c| type_by_path(c.path) }
       pick_main_type(types)
     end
@@ -321,7 +321,7 @@ module KKGit
 
       return 'chore' unless code_path?(path)
 
-      # 默认：代码修改更接近 fix（更保守）；新增则在 infer_type 中处理为 feat
+      # Default: treat code changes as fix (conservative). Adds are handled as feat by infer_type.
       'fix'
     end
 
@@ -409,11 +409,11 @@ module KKGit
         c = changes.first
         action =
           case c.status
-          when 'A' then '新增'
-          when 'D' then '删除'
-          when 'R' then '重命名'
-          when 'C' then '复制'
-          else '更新'
+          when 'A' then 'Add'
+          when 'D' then 'Remove'
+          when 'R' then 'Rename'
+          when 'C' then 'Copy'
+          else 'Update'
           end
 
         if %w[R C].include?(c.status) && c.old_path
@@ -424,21 +424,21 @@ module KKGit
 
       label =
         case scope
-        when 'repo' then '项目'
-        when 'tools' then '工具'
+        when 'repo' then 'project'
+        when 'tools' then 'tools'
         else scope
         end
 
       case type
-      when 'feat' then "添加#{label}功能"
-      when 'fix' then "修复#{label}问题"
-      when 'docs' then "更新#{label}文档"
-      when 'refactor' then "重构#{label}代码"
-      when 'style' then "调整#{label}代码格式"
-      when 'perf' then "优化#{label}性能"
-      when 'test' then "更新#{label}测试"
-      when 'ci' then "更新#{label}CI配置"
-      else "维护#{label}"
+      when 'feat' then "Add #{label} features"
+      when 'fix' then "Fix #{label} issues"
+      when 'docs' then "Update #{label} docs"
+      when 'refactor' then "Refactor #{label}"
+      when 'style' then "Format #{label}"
+      when 'perf' then "Improve #{label} performance"
+      when 'test' then "Update #{label} tests"
+      when 'ci' then "Update #{label} CI"
+      else "Update #{label}"
       end
     end
 
@@ -458,12 +458,12 @@ module KKGit
       end
 
       lines = []
-      append_group(lines, '新增', groups['A'])
-      append_group(lines, '修改', groups['M'])
-      append_group(lines, '删除', groups['D'])
-      append_group(lines, '重命名', groups['R'])
-      append_group(lines, '复制', groups['C'])
-      append_group(lines, '其他', groups['?'])
+      append_group(lines, 'Added', groups['A'])
+      append_group(lines, 'Changed', groups['M'])
+      append_group(lines, 'Removed', groups['D'])
+      append_group(lines, 'Renamed', groups['R'])
+      append_group(lines, 'Copied', groups['C'])
+      append_group(lines, 'Other', groups['?'])
       lines.join("\n")
     end
 

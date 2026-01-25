@@ -1,26 +1,27 @@
-## 目标
+## Goal
 
-生成一个 Ruby gem 工具：根据当前 Git repo 的修改内容自动生成 Conventional Commits 格式的 commit message，方便在 `Rakefile` 中调用。
+Build a Ruby gem that generates Conventional Commits messages from the current git repo changes, designed to be used from `Rakefile`.
 
-## 实现
+## Implementation
 
 - **Ruby API**: `KKGit::CommitMessage.generate(...)`
-- **CLI**: `exe/kk-git commit-message ...`
+- **CLI**: `kk-git commit-message ...`
 - **Rake tasks**:
-  - `rake git:commit_message`（暂存区）
-  - `rake git:commit_message_worktree`（工作区，含 untracked）
-  - `rake git:commit_message_all`（合并）
+  - `rake git:commit_message` (staged)
+  - `rake git:commit_message_worktree` (worktree, includes untracked)
+  - `rake git:auto_commit` (staged + worktree, generate/print message)
+  - `rake git:auto_commit_push` (add/commit/pull/push)
 
-## 示例
+## Examples
 
 ```bash
-# 工作区（含 untracked）
-ruby -Ilib exe/kk-git commit-message --worktree
+# Worktree (includes untracked)
+kk-git commit-message --worktree
 
-# 暂存区（先 git add）
-ruby -Ilib exe/kk-git commit-message --staged
+# Staged (after git add)
+kk-git commit-message --staged
 
 # Rake
-rake git:commit_message_worktree
+rake git:auto_commit
 ```
 

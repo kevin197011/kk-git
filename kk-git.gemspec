@@ -9,8 +9,8 @@ Gem::Specification.new do |spec|
   spec.authors = ['kk']
   spec.email = ['']
 
-  spec.summary = 'Git 辅助工具：自动生成 Conventional Commit 信息'
-  spec.description = '根据当前 Git repo 的变更（暂存/工作区）自动生成 Conventional Commits 格式的 commit message，便于 Rake/脚本调用。'
+  spec.summary = 'Git helper: generate Conventional Commits messages'
+  spec.description = 'Generate Conventional Commits commit messages from current git changes (staged/worktree), designed for Rake/script usage.'
   spec.homepage = ''
   spec.license = 'MIT'
   spec.required_ruby_version = '>= 3.1'

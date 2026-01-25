@@ -25,45 +25,51 @@ parser = OptionParser.new do |opts|
   opts.banner = "Usage:\n" \
                 "  kk-git --version\n" \
                 "  kk-git commit-message [options]\n\n" \
-                "根据当前 Git repo 变更生成 Conventional Commit 信息。"
+                "Generate Conventional Commits messages from git changes."
 
-  opts.on('--repo DIR', '指定 repo 目录（默认当前目录）') { |v| options[:repo_dir] = v }
+  opts.on('--repo DIR', 'Git repo directory (default: current dir)') { |v| options[:repo_dir] = v }
 
-  opts.on('--staged', '仅基于暂存区变更（默认）') { options[:mode] = :staged }
-  opts.on('--worktree', '仅基于工作区变更（含 untracked）') { options[:mode] = :worktree }
-  opts.on('--all', '合并暂存区与工作区变更') { options[:mode] = :all }
+  opts.on('--staged', 'Use staged changes only (default)') { options[:mode] = :staged }
+  opts.on('--worktree', 'Use working-tree changes only (includes untracked)') { options[:mode] = :worktree }
+  opts.on('--all', 'Combine staged + working-tree changes') { options[:mode] = :all }
 
-  opts.on('--[no-]body', '多文件时输出/不输出 body（默认输出）') { |v| options[:include_body] = v }
+  opts.on('--[no-]body', 'Include body for multi-file changes (default: yes)') { |v| options[:include_body] = v }
 
-  opts.on('--type TYPE', '覆盖自动推断的 type（如 feat/fix/docs）') { |v| options[:type] = v }
-  opts.on('--scope SCOPE', '覆盖自动推断的 scope') { |v| options[:scope] = v }
-  opts.on('--subject SUBJECT', '覆盖自动推断的 subject') { |v| options[:subject] = v }
-  opts.on('--[no-]detect-breaking', '是否检测 BREAKING 标记（默认检测）') { |v| options[:detect_breaking] = v }
+  opts.on('--type TYPE', 'Override inferred type (feat/fix/docs/...)') { |v| options[:type] = v }
+  opts.on('--scope SCOPE', 'Override inferred scope') { |v| options[:scope] = v }
+  opts.on('--subject SUBJECT', 'Override inferred subject') { |v| options[:subject] = v }
+  opts.on('--[no-]detect-breaking', 'Detect BREAKING markers (default: yes)') { |v| options[:detect_breaking] = v }
 
-  opts.on('--format FORMAT', '输出格式：text/json（默认 text）') do |v|
+  opts.on('--format FORMAT', 'Output format: text/json (default: text)') do |v|
     options[:format] = v.to_s.downcase.to_sym
   end
 
-  opts.on('-h', '--help', '显示帮助') do
+  opts.on('-h', '--help', 'Show help') do
     puts opts
     exit 0
   end
 
-  opts.on('-v', '--version', '显示版本号') do
+  opts.on('-v', '--version', 'Show version') do
     puts KKGit::VERSION
     exit 0
   end
 end
 
-# 支持 `kk-git --version` 这种无子命令形式
+# Support `kk-git --version` without subcommand
 if ['--version', '-v'].include?(ARGV[0])
   puts KKGit::VERSION
   exit 0
 end
 
+# Support `kk-git --help` without subcommand
+if ['--help', '-h'].include?(ARGV[0])
+  puts parser
+  exit 0
+end
+
 subcommand = ARGV.shift
 if subcommand != 'commit-message'
-  warn "未知命令: #{subcommand}\n\n#{parser}"
+  warn "Unknown command: #{subcommand}\n\n#{parser}"
   exit 2
 end
 
@@ -72,8 +78,8 @@ parser.parse!(ARGV)
 def to_utf8(str)
   return nil if str.nil?
   s = str.to_s.dup
-  # ARGV 在不同 locale 下可能被标记为 ASCII-8BIT/US-ASCII，但字节本身通常是 UTF-8。
-  # 这里优先按 UTF-8 解释字节，并对非法序列做 scrub。
+  # In some locales ARGV may be tagged as ASCII-8BIT/US-ASCII, but bytes are usually UTF-8.
+  # Prefer interpreting bytes as UTF-8 and scrub invalid sequences.
   s.force_encoding(Encoding::UTF_8)
   s.scrub('�')
 end
