@@ -10,110 +10,174 @@ rescue LoadError
   require_relative '../lib/kk/git'
 end
 
-options = {
-  mode: :staged,
-  format: :text,
-  include_body: true,
-  repo_dir: '.',
-  type: nil,
-  scope: nil,
-  subject: nil,
-  detect_breaking: true
-}
+def to_utf8(str)
+  return nil if str.nil?
 
-parser = OptionParser.new do |opts|
-  opts.banner = "Usage:\n" \
-                "  kk-git --version\n" \
-                "  kk-git commit-message [options]\n\n" \
-                "Generate Conventional Commits messages from git changes."
+  s = str.to_s.dup
+  s.force_encoding(Encoding::UTF_8)
+  s.scrub('�')
+end
 
-  opts.on('--repo DIR', 'Git repo directory (default: current dir)') { |v| options[:repo_dir] = v }
+def run_commit_message!(argv)
+  options = {
+    mode: :staged,
+    format: :text,
+    include_body: true,
+    repo_dir: '.',
+    type: nil,
+    scope: nil,
+    subject: nil,
+    detect_breaking: true
+  }
 
-  opts.on('--staged', 'Use staged changes only (default)') { options[:mode] = :staged }
-  opts.on('--worktree', 'Use working-tree changes only (includes untracked)') { options[:mode] = :worktree }
-  opts.on('--all', 'Combine staged + working-tree changes') { options[:mode] = :all }
+  parser = OptionParser.new do |opts|
+    opts.banner = 'Usage: kk-git commit-message [options]'
+    opts.on('--repo DIR', 'Git repo directory (default: current dir)') { |v| options[:repo_dir] = v }
+    opts.on('--staged', 'Use staged changes only (default)') { options[:mode] = :staged }
+    opts.on('--worktree', 'Use working-tree changes only (includes untracked)') { options[:mode] = :worktree }
+    opts.on('--all', 'Combine staged + working-tree changes') { options[:mode] = :all }
+    opts.on('--[no-]body', 'Include body for multi-file changes (default: yes)') { |v| options[:include_body] = v }
+    opts.on('--type TYPE', 'Override inferred type') { |v| options[:type] = v }
+    opts.on('--scope SCOPE', 'Override inferred scope') { |v| options[:scope] = v }
+    opts.on('--subject SUBJECT', 'Override inferred subject') { |v| options[:subject] = v }
+    opts.on('--[no-]detect-breaking', 'Detect BREAKING markers (default: yes)') { |v| options[:detect_breaking] = v }
+    opts.on('--format FORMAT', 'Output format: text/json (default: text)') { |v| options[:format] = v.to_s.downcase.to_sym }
+    opts.on('-h', '--help', 'Show help') { puts opts; exit 0 }
+  end
+  parser.parse!(argv)
 
-  opts.on('--[no-]body', 'Include body for multi-file changes (default: yes)') { |v| options[:include_body] = v }
+  options[:type] = to_utf8(options[:type])
+  options[:scope] = to_utf8(options[:scope])
+  options[:subject] = to_utf8(options[:subject])
 
-  opts.on('--type TYPE', 'Override inferred type (feat/fix/docs/...)') { |v| options[:type] = v }
-  opts.on('--scope SCOPE', 'Override inferred scope') { |v| options[:scope] = v }
-  opts.on('--subject SUBJECT', 'Override inferred subject') { |v| options[:subject] = v }
-  opts.on('--[no-]detect-breaking', 'Detect BREAKING markers (default: yes)') { |v| options[:detect_breaking] = v }
+  result =
+    if options[:format] == :json
+      KKGit::CommitMessage.generate_hash(
+        repo_dir: options[:repo_dir],
+        mode: options[:mode],
+        include_body: options[:include_body],
+        type_override: options[:type],
+        scope_override: options[:scope],
+        subject_override: options[:subject],
+        detect_breaking: options[:detect_breaking]
+      )
+    else
+      KKGit::CommitMessage.generate(
+        repo_dir: options[:repo_dir],
+        mode: options[:mode],
+        include_body: options[:include_body],
+        type_override: options[:type],
+        scope_override: options[:scope],
+        subject_override: options[:subject],
+        detect_breaking: options[:detect_breaking]
+      )
+    end
 
-  opts.on('--format FORMAT', 'Output format: text/json (default: text)') do |v|
-    options[:format] = v.to_s.downcase.to_sym
+  if result.nil? || (result.is_a?(Hash) && result[:empty])
+    exit 1
   end
 
-  opts.on('-h', '--help', 'Show help') do
-    puts opts
-    exit 0
-  end
+  puts(options[:format] == :json ? JSON.pretty_generate(result) : result)
+end
 
-  opts.on('-v', '--version', 'Show version') do
-    puts KKGit::VERSION
-    exit 0
+def run_status!(argv)
+  options = { format: :text }
+  parser = OptionParser.new do |opts|
+    opts.banner = 'Usage: kk-git status [options]'
+    opts.on('--format FORMAT', 'Output format: text/json (default: text)') { |v| options[:format] = v.to_s.downcase.to_sym }
+    opts.on('-h', '--help', 'Show help') { puts opts; exit 0 }
+  end
+  parser.parse!(argv)
+
+  hash = KKGit::GitOps.status_hash
+  if options[:format] == :json
+    puts JSON.pretty_generate(hash)
+  else
+    puts "Branch: #{hash[:branch]} (#{hash[:remote]})"
+    puts "Working tree: #{hash[:clean] ? 'clean' : 'dirty'}"
+    puts "Ahead: #{hash[:ahead]}, Behind: #{hash[:behind]}"
+    puts "Upstream: #{hash[:upstream_configured] ? 'configured' : 'not set'}"
+    puts 'Detached HEAD: yes' if hash[:detached]
   end
 end
 
-# Support `kk-git --version` without subcommand
+def run_sync!(argv)
+  parser = OptionParser.new do |opts|
+    opts.banner = 'Usage: kk-git sync [options]'
+    opts.on('-h', '--help', 'Show help') { puts opts; exit 0 }
+  end
+  parser.parse!(argv)
+
+  remote = KKGit::GitOps.remote
+  branch = KKGit::GitOps.branch
+  s = KKGit::GitOps.status(remote: remote, branch: branch)
+
+  if s.needs_sync?
+    KKGit::GitOps.sync_with_remote!(remote, branch)
+  else
+    puts 'Already in sync with remote'
+  end
+end
+
+def run_push!(argv)
+  parser = OptionParser.new do |opts|
+    opts.banner = 'Usage: kk-git push [options]'
+    opts.on('-h', '--help', 'Show help') { puts opts; exit 0 }
+  end
+  parser.parse!(argv)
+
+  KKGit::GitOps.auto_commit_push!
+end
+
+def main_help
+  <<~HELP
+    Usage:
+      kk-git --version
+      kk-git commit-message [options]
+      kk-git status [options]
+      kk-git sync [options]
+      kk-git push [options]
+
+    Git helper: generate Conventional Commits messages and automate sync.
+
+    Environment variables (push/sync):
+      KK_GIT_REMOTE       remote name (default: origin)
+      KK_GIT_BRANCH       branch name (default: current branch)
+      KK_GIT_PULL_ARGS    extra args for git pull (default: --ff-only)
+      KK_GIT_ADD_PATHS    paths for git add (default: .)
+      KK_GIT_DRY_RUN=1    print commands without executing
+      KK_GIT_SKIP_PULL=1  skip pull step
+      KK_GIT_SKIP_PUSH=1  skip push step
+      KK_GIT_AMEND=1      amend last commit instead of creating new one
+
+    Run `kk-git <command> --help` for command-specific options.
+  HELP
+end
+
 if ['--version', '-v'].include?(ARGV[0])
   puts KKGit::VERSION
   exit 0
 end
 
-# Support `kk-git --help` without subcommand
-if ['--help', '-h'].include?(ARGV[0])
-  puts parser
+if ['--help', '-h'].include?(ARGV[0]) && ARGV.length == 1
+  puts main_help
   exit 0
 end
 
 subcommand = ARGV.shift
-if subcommand != 'commit-message'
-  warn "Unknown command: #{subcommand}\n\n#{parser}"
+case subcommand
+when 'commit-message'
+  run_commit_message!(ARGV)
+when 'status'
+  run_status!(ARGV)
+when 'sync'
+  run_sync!(ARGV)
+when 'push'
+  run_push!(ARGV)
+when nil
+  warn "Missing command.\n\n#{main_help}"
+  exit 2
+else
+  warn "Unknown command: #{subcommand}\n\n#{main_help}"
   exit 2
 end
-
-parser.parse!(ARGV)
-
-def to_utf8(str)
-  return nil if str.nil?
-  s = str.to_s.dup
-  # In some locales ARGV may be tagged as ASCII-8BIT/US-ASCII, but bytes are usually UTF-8.
-  # Prefer interpreting bytes as UTF-8 and scrub invalid sequences.
-  s.force_encoding(Encoding::UTF_8)
-  s.scrub('�')
-end
-
-options[:type] = to_utf8(options[:type])
-options[:scope] = to_utf8(options[:scope])
-options[:subject] = to_utf8(options[:subject])
-
-result =
-  if options[:format] == :json
-    KKGit::CommitMessage.generate_hash(
-      repo_dir: options[:repo_dir],
-      mode: options[:mode],
-      include_body: options[:include_body],
-      type_override: options[:type],
-      scope_override: options[:scope],
-      subject_override: options[:subject],
-      detect_breaking: options[:detect_breaking]
-    )
-  else
-    KKGit::CommitMessage.generate(
-      repo_dir: options[:repo_dir],
-      mode: options[:mode],
-      include_body: options[:include_body],
-      type_override: options[:type],
-      scope_override: options[:scope],
-      subject_override: options[:subject],
-      detect_breaking: options[:detect_breaking]
-    )
-  end
-
-if result.nil? || (result.is_a?(Hash) && result[:empty])
-  exit 1
-end
-
-puts(options[:format] == :json ? JSON.pretty_generate(result) : result)
-
