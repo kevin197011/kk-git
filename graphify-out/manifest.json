@@ -1,0 +1,82 @@
+{
+  "/Users/kevin/projects/src/kk-git/push.rb": {
+    "mtime": 1769258462.132976,
+    "ast_hash": "1a4a126df6a1c6c408a593686dd241d7",
+    "semantic_hash": ""
+  },
+  "/Users/kevin/projects/src/kk-git/deploy.sh": {
+    "mtime": 1769258462.132556,
+    "ast_hash": "850f99771dbb1bb2cda6779fc89ecf57",
+    "semantic_hash": ""
+  },
+  "/Users/kevin/projects/src/kk-git/scripts/test.rb": {
+    "mtime": 1781892128.5235174,
+    "ast_hash": "908992bf113008e0f75d8e3a2adadef9",
+    "semantic_hash": ""
+  },
+  "/Users/kevin/projects/src/kk-git/lib/kk/git.rb": {
+    "mtime": 1781892094.7757764,
+    "ast_hash": "27e69e5f51d6d56b236ec9d18f044cdb",
+    "semantic_hash": ""
+  },
+  "/Users/kevin/projects/src/kk-git/lib/kk/git/commit_message.rb": {
+    "mtime": 1769358898.5382166,
+    "ast_hash": "9068072f7af8b8332fb4dafbd237314a",
+    "semantic_hash": ""
+  },
+  "/Users/kevin/projects/src/kk-git/lib/kk/git/rake_tasks.rb": {
+    "mtime": 1781892099.1134107,
+    "ast_hash": "9008a2d4029faf11c7a9a691e93f6ce7",
+    "semantic_hash": ""
+  },
+  "/Users/kevin/projects/src/kk-git/lib/kk/git/version.rb": {
+    "mtime": 1781892111.5548437,
+    "ast_hash": "d322e63f836f6130da7ccbc09572955e",
+    "semantic_hash": ""
+  },
+  "/Users/kevin/projects/src/kk-git/lib/kk/git/git_ops.rb": {
+    "mtime": 1781892127.9677153,
+    "ast_hash": "aeb83dc948c7a971de33b1ea914e6247",
+    "semantic_hash": ""
+  },
+  "/Users/kevin/projects/src/kk-git/exe/kk-git": {
+    "mtime": 1781892108.332297,
+    "ast_hash": "b2be05983089d7d1f0325431734e516d",
+    "semantic_hash": ""
+  },
+  "/Users/kevin/projects/src/kk-git/README.md": {
+    "mtime": 1781892121.147597,
+    "ast_hash": "a758397e7313ec46cf59de0e20d42502",
+    "semantic_hash": ""
+  },
+  "/Users/kevin/projects/src/kk-git/r.md": {
+    "mtime": 1769358798.7476063,
+    "ast_hash": "0e4ef5933faccb67d0e93f659cc70eae",
+    "semantic_hash": ""
+  },
+  "/Users/kevin/projects/src/kk-git/.rubocop.yml": {
+    "mtime": 1769258462.131958,
+    "ast_hash": "38eb0a2a3c2e8c4fae2861d84280fc79",
+    "semantic_hash": ""
+  },
+  "/Users/kevin/projects/src/kk-git/AGENTS.md": {
+    "mtime": 1769258462.132025,
+    "ast_hash": "20e021bc0804e03bd75005141b6a7937",
+    "semantic_hash": ""
+  },
+  "/Users/kevin/projects/src/kk-git/.github/workflows/release-gem.yml": {
+    "mtime": 1769264473.386344,
+    "ast_hash": "578fe1a5ee21a48196dabe164caf28f6",
+    "semantic_hash": ""
+  },
+  "/Users/kevin/projects/src/kk-git/openspec/project.md": {
+    "mtime": 1769258462.1328921,
+    "ast_hash": "9128dd5369b472ee5e57a42d9a2010cb",
+    "semantic_hash": ""
+  },
+  "/Users/kevin/projects/src/kk-git/openspec/AGENTS.md": {
+    "mtime": 1769258462.1327689,
+    "ast_hash": "de4bb26b49a257b46c11303554231ba0",
+    "semantic_hash": ""
+  }
+}

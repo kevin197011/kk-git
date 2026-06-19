@@ -1,0 +1,4713 @@
+{
+  "directed": false,
+  "multigraph": false,
+  "graph": {},
+  "nodes": [
+    {
+      "label": "push.rb",
+      "file_type": "code",
+      "source_file": "push.rb",
+      "source_location": "L1",
+      "id": "push_rb",
+      "community": 12,
+      "norm_label": "push.rb"
+    },
+    {
+      "label": "deploy.sh",
+      "file_type": "code",
+      "source_file": "deploy.sh",
+      "source_location": "L1",
+      "id": "deploy_sh",
+      "community": 13,
+      "norm_label": "deploy.sh"
+    },
+    {
+      "label": "test.rb",
+      "file_type": "code",
+      "source_file": "scripts/test.rb",
+      "source_location": "L1",
+      "id": "scripts_test_rb",
+      "community": 5,
+      "norm_label": "test.rb"
+    },
+    {
+      "label": "TestRunner",
+      "file_type": "code",
+      "source_file": "scripts/test.rb",
+      "source_location": "L9",
+      "id": "scripts_test_testrunner",
+      "community": 5,
+      "norm_label": "testrunner"
+    },
+    {
+      "label": ".initialize()",
+      "file_type": "code",
+      "source_file": "scripts/test.rb",
+      "source_location": "L10",
+      "id": "scripts_test_testrunner_initialize",
+      "community": 5,
+      "norm_label": ".initialize()"
+    },
+    {
+      "label": ".run()",
+      "file_type": "code",
+      "source_file": "scripts/test.rb",
+      "source_location": "L16",
+      "id": "scripts_test_testrunner_run",
+      "community": 5,
+      "norm_label": ".run()"
+    },
+    {
+      "label": ".load_kkgit()",
+      "file_type": "code",
+      "source_file": "scripts/test.rb",
+      "source_location": "L27",
+      "id": "scripts_test_testrunner_load_kkgit",
+      "community": 5,
+      "norm_label": ".load_kkgit()"
+    },
+    {
+      "label": ".assert()",
+      "file_type": "code",
+      "source_file": "scripts/test.rb",
+      "source_location": "L32",
+      "id": "scripts_test_testrunner_assert",
+      "community": 5,
+      "norm_label": ".assert()"
+    },
+    {
+      "label": ".test_commit_message_inference()",
+      "file_type": "code",
+      "source_file": "scripts/test.rb",
+      "source_location": "L36",
+      "id": "scripts_test_testrunner_test_commit_message_inference",
+      "community": 5,
+      "norm_label": ".test_commit_message_inference()"
+    },
+    {
+      "label": ".test_git_ops_in_temp_repo()",
+      "file_type": "code",
+      "source_file": "scripts/test.rb",
+      "source_location": "L62",
+      "id": "scripts_test_testrunner_test_git_ops_in_temp_repo",
+      "community": 5,
+      "norm_label": ".test_git_ops_in_temp_repo()"
+    },
+    {
+      "label": ".init_repo()",
+      "file_type": "code",
+      "source_file": "scripts/test.rb",
+      "source_location": "L93",
+      "id": "scripts_test_testrunner_init_repo",
+      "community": 5,
+      "norm_label": ".init_repo()"
+    },
+    {
+      "label": ".write_file()",
+      "file_type": "code",
+      "source_file": "scripts/test.rb",
+      "source_location": "L99",
+      "id": "scripts_test_testrunner_write_file",
+      "community": 5,
+      "norm_label": ".write_file()"
+    },
+    {
+      "label": ".run_git()",
+      "file_type": "code",
+      "source_file": "scripts/test.rb",
+      "source_location": "L105",
+      "id": "scripts_test_testrunner_run_git",
+      "community": 5,
+      "norm_label": ".run_git()"
+    },
+    {
+      "label": ".print_results()",
+      "file_type": "code",
+      "source_file": "scripts/test.rb",
+      "source_location": "L112",
+      "id": "scripts_test_testrunner_print_results",
+      "community": 5,
+      "norm_label": ".print_results()"
+    },
+    {
+      "label": "git.rb",
+      "file_type": "code",
+      "source_file": "lib/kk/git.rb",
+      "source_location": "L1",
+      "id": "lib_kk_git_rb",
+      "community": 14,
+      "norm_label": "git.rb"
+    },
+    {
+      "label": "commit_message.rb",
+      "file_type": "code",
+      "source_file": "lib/kk/git/commit_message.rb",
+      "source_location": "L1",
+      "id": "lib_kk_git_commit_message_rb",
+      "community": 2,
+      "norm_label": "commit_message.rb"
+    },
+    {
+      "label": "CommitMessage",
+      "file_type": "code",
+      "source_file": "lib/kk/git/commit_message.rb",
+      "source_location": "L12",
+      "id": "git_commit_message_commitmessage",
+      "community": 2,
+      "norm_label": "commitmessage"
+    },
+    {
+      "label": ".generate()",
+      "file_type": "code",
+      "source_file": "lib/kk/git/commit_message.rb",
+      "source_location": "L41",
+      "id": "git_commit_message_commitmessage_generate",
+      "community": 2,
+      "norm_label": ".generate()"
+    },
+    {
+      "label": ".generate_hash()",
+      "file_type": "code",
+      "source_file": "lib/kk/git/commit_message.rb",
+      "source_location": "L75",
+      "id": "git_commit_message_commitmessage_generate_hash",
+      "community": 2,
+      "norm_label": ".generate_hash()"
+    },
+    {
+      "label": ".collect_changes()",
+      "file_type": "code",
+      "source_file": "lib/kk/git/commit_message.rb",
+      "source_location": "L118",
+      "id": "git_commit_message_commitmessage_collect_changes",
+      "community": 2,
+      "norm_label": ".collect_changes()"
+    },
+    {
+      "label": ".parse_name_status_z()",
+      "file_type": "code",
+      "source_file": "lib/kk/git/commit_message.rb",
+      "source_location": "L143",
+      "id": "git_commit_message_commitmessage_parse_name_status_z",
+      "community": 2,
+      "norm_label": ".parse_name_status_z()"
+    },
+    {
+      "label": ".normalize_and_dedup()",
+      "file_type": "code",
+      "source_file": "lib/kk/git/commit_message.rb",
+      "source_location": "L171",
+      "id": "git_commit_message_commitmessage_normalize_and_dedup",
+      "community": 2,
+      "norm_label": ".normalize_and_dedup()"
+    },
+    {
+      "label": ".change_priority()",
+      "file_type": "code",
+      "source_file": "lib/kk/git/commit_message.rb",
+      "source_location": "L196",
+      "id": "git_commit_message_commitmessage_change_priority",
+      "community": 2,
+      "norm_label": ".change_priority()"
+    },
+    {
+      "label": ".run_git()",
+      "file_type": "code",
+      "source_file": "lib/kk/git/commit_message.rb",
+      "source_location": "L213",
+      "id": "git_commit_message_commitmessage_run_git",
+      "community": 2,
+      "norm_label": ".run_git()"
+    },
+    {
+      "label": ".infer()",
+      "file_type": "code",
+      "source_file": "lib/kk/git/commit_message.rb",
+      "source_location": "L227",
+      "id": "git_commit_message_commitmessage_infer",
+      "community": 2,
+      "norm_label": ".infer()"
+    },
+    {
+      "label": ".pick_main_type()",
+      "file_type": "code",
+      "source_file": "lib/kk/git/commit_message.rb",
+      "source_location": "L237",
+      "id": "git_commit_message_commitmessage_pick_main_type",
+      "community": 2,
+      "norm_label": ".pick_main_type()"
+    },
+    {
+      "label": ".pick_scope()",
+      "file_type": "code",
+      "source_file": "lib/kk/git/commit_message.rb",
+      "source_location": "L241",
+      "id": "git_commit_message_commitmessage_pick_scope",
+      "community": 2,
+      "norm_label": ".pick_scope()"
+    },
+    {
+      "label": ".infer_scope()",
+      "file_type": "code",
+      "source_file": "lib/kk/git/commit_message.rb",
+      "source_location": "L252",
+      "id": "git_commit_message_commitmessage_infer_scope",
+      "community": 2,
+      "norm_label": ".infer_scope()"
+    },
+    {
+      "label": ".top_level_scope()",
+      "file_type": "code",
+      "source_file": "lib/kk/git/commit_message.rb",
+      "source_location": "L268",
+      "id": "git_commit_message_commitmessage_top_level_scope",
+      "community": 2,
+      "norm_label": ".top_level_scope()"
+    },
+    {
+      "label": ".infer_type()",
+      "file_type": "code",
+      "source_file": "lib/kk/git/commit_message.rb",
+      "source_location": "L277",
+      "id": "git_commit_message_commitmessage_infer_type",
+      "community": 2,
+      "norm_label": ".infer_type()"
+    },
+    {
+      "label": ".type_by_path()",
+      "file_type": "code",
+      "source_file": "lib/kk/git/commit_message.rb",
+      "source_location": "L313",
+      "id": "git_commit_message_commitmessage_type_by_path",
+      "community": 2,
+      "norm_label": ".type_by_path()"
+    },
+    {
+      "label": ".doc_path?()",
+      "file_type": "code",
+      "source_file": "lib/kk/git/commit_message.rb",
+      "source_location": "L328",
+      "id": "git_commit_message_commitmessage_doc_path",
+      "community": 2,
+      "norm_label": ".doc_path?()"
+    },
+    {
+      "label": ".ci_path?()",
+      "file_type": "code",
+      "source_file": "lib/kk/git/commit_message.rb",
+      "source_location": "L335",
+      "id": "git_commit_message_commitmessage_ci_path",
+      "community": 2,
+      "norm_label": ".ci_path?()"
+    },
+    {
+      "label": ".test_path?()",
+      "file_type": "code",
+      "source_file": "lib/kk/git/commit_message.rb",
+      "source_location": "L343",
+      "id": "git_commit_message_commitmessage_test_path",
+      "community": 2,
+      "norm_label": ".test_path?()"
+    },
+    {
+      "label": ".deps_path?()",
+      "file_type": "code",
+      "source_file": "lib/kk/git/commit_message.rb",
+      "source_location": "L351",
+      "id": "git_commit_message_commitmessage_deps_path",
+      "community": 2,
+      "norm_label": ".deps_path?()"
+    },
+    {
+      "label": ".build_path?()",
+      "file_type": "code",
+      "source_file": "lib/kk/git/commit_message.rb",
+      "source_location": "L363",
+      "id": "git_commit_message_commitmessage_build_path",
+      "community": 2,
+      "norm_label": ".build_path?()"
+    },
+    {
+      "label": ".config_path?()",
+      "file_type": "code",
+      "source_file": "lib/kk/git/commit_message.rb",
+      "source_location": "L371",
+      "id": "git_commit_message_commitmessage_config_path",
+      "community": 2,
+      "norm_label": ".config_path?()"
+    },
+    {
+      "label": ".script_path?()",
+      "file_type": "code",
+      "source_file": "lib/kk/git/commit_message.rb",
+      "source_location": "L384",
+      "id": "git_commit_message_commitmessage_script_path",
+      "community": 2,
+      "norm_label": ".script_path?()"
+    },
+    {
+      "label": ".tooling_path?()",
+      "file_type": "code",
+      "source_file": "lib/kk/git/commit_message.rb",
+      "source_location": "L391",
+      "id": "git_commit_message_commitmessage_tooling_path",
+      "community": 2,
+      "norm_label": ".tooling_path?()"
+    },
+    {
+      "label": ".code_path?()",
+      "file_type": "code",
+      "source_file": "lib/kk/git/commit_message.rb",
+      "source_location": "L402",
+      "id": "git_commit_message_commitmessage_code_path",
+      "community": 2,
+      "norm_label": ".code_path?()"
+    },
+    {
+      "label": ".generate_subject()",
+      "file_type": "code",
+      "source_file": "lib/kk/git/commit_message.rb",
+      "source_location": "L407",
+      "id": "git_commit_message_commitmessage_generate_subject",
+      "community": 2,
+      "norm_label": ".generate_subject()"
+    },
+    {
+      "label": ".generate_body()",
+      "file_type": "code",
+      "source_file": "lib/kk/git/commit_message.rb",
+      "source_location": "L445",
+      "id": "git_commit_message_commitmessage_generate_body",
+      "community": 2,
+      "norm_label": ".generate_body()"
+    },
+    {
+      "label": ".append_group()",
+      "file_type": "code",
+      "source_file": "lib/kk/git/commit_message.rb",
+      "source_location": "L470",
+      "id": "git_commit_message_commitmessage_append_group",
+      "community": 2,
+      "norm_label": ".append_group()"
+    },
+    {
+      "label": ".detect_breaking_change()",
+      "file_type": "code",
+      "source_file": "lib/kk/git/commit_message.rb",
+      "source_location": "L483",
+      "id": "git_commit_message_commitmessage_detect_breaking_change",
+      "community": 2,
+      "norm_label": ".detect_breaking_change()"
+    },
+    {
+      "label": "rake_tasks.rb",
+      "file_type": "code",
+      "source_file": "lib/kk/git/rake_tasks.rb",
+      "source_location": "L1",
+      "id": "lib_kk_git_rake_tasks_rb",
+      "community": 1,
+      "norm_label": "rake_tasks.rb"
+    },
+    {
+      "label": "install!()",
+      "file_type": "code",
+      "source_file": "lib/kk/git/rake_tasks.rb",
+      "source_location": "L13",
+      "id": "git_rake_tasks_install",
+      "community": 1,
+      "norm_label": "install!()"
+    },
+    {
+      "label": "version.rb",
+      "file_type": "code",
+      "source_file": "lib/kk/git/version.rb",
+      "source_location": "L1",
+      "id": "lib_kk_git_version_rb",
+      "community": 15,
+      "norm_label": "version.rb"
+    },
+    {
+      "label": "git_ops.rb",
+      "file_type": "code",
+      "source_file": "lib/kk/git/git_ops.rb",
+      "source_location": "L1",
+      "id": "lib_kk_git_git_ops_rb",
+      "community": 1,
+      "norm_label": "git_ops.rb"
+    },
+    {
+      "label": "Error",
+      "file_type": "code",
+      "source_file": "lib/kk/git/git_ops.rb",
+      "source_location": "L9",
+      "id": "git_git_ops_error",
+      "community": 1,
+      "norm_label": "error"
+    },
+    {
+      "label": "needs_sync?()",
+      "file_type": "code",
+      "source_file": "lib/kk/git/git_ops.rb",
+      "source_location": "L18",
+      "id": "git_git_ops_needs_sync",
+      "community": 1,
+      "norm_label": "needs_sync?()"
+    },
+    {
+      "label": "unpushed?()",
+      "file_type": "code",
+      "source_file": "lib/kk/git/git_ops.rb",
+      "source_location": "L22",
+      "id": "git_git_ops_unpushed",
+      "community": 1,
+      "norm_label": "unpushed?()"
+    },
+    {
+      "label": "behind_remote?()",
+      "file_type": "code",
+      "source_file": "lib/kk/git/git_ops.rb",
+      "source_location": "L26",
+      "id": "git_git_ops_behind_remote",
+      "community": 1,
+      "norm_label": "behind_remote?()"
+    },
+    {
+      "label": "dry_run?()",
+      "file_type": "code",
+      "source_file": "lib/kk/git/git_ops.rb",
+      "source_location": "L33",
+      "id": "git_git_ops_dry_run",
+      "community": 1,
+      "norm_label": "dry_run?()"
+    },
+    {
+      "label": "skip_pull?()",
+      "file_type": "code",
+      "source_file": "lib/kk/git/git_ops.rb",
+      "source_location": "L37",
+      "id": "git_git_ops_skip_pull",
+      "community": 1,
+      "norm_label": "skip_pull?()"
+    },
+    {
+      "label": "skip_push?()",
+      "file_type": "code",
+      "source_file": "lib/kk/git/git_ops.rb",
+      "source_location": "L41",
+      "id": "git_git_ops_skip_push",
+      "community": 1,
+      "norm_label": "skip_push?()"
+    },
+    {
+      "label": "amend?()",
+      "file_type": "code",
+      "source_file": "lib/kk/git/git_ops.rb",
+      "source_location": "L45",
+      "id": "git_git_ops_amend",
+      "community": 1,
+      "norm_label": "amend?()"
+    },
+    {
+      "label": "remote()",
+      "file_type": "code",
+      "source_file": "lib/kk/git/git_ops.rb",
+      "source_location": "L49",
+      "id": "git_git_ops_remote",
+      "community": 1,
+      "norm_label": "remote()"
+    },
+    {
+      "label": "branch()",
+      "file_type": "code",
+      "source_file": "lib/kk/git/git_ops.rb",
+      "source_location": "L54",
+      "id": "git_git_ops_branch",
+      "community": 1,
+      "norm_label": "branch()"
+    },
+    {
+      "label": "add_paths()",
+      "file_type": "code",
+      "source_file": "lib/kk/git/git_ops.rb",
+      "source_location": "L59",
+      "id": "git_git_ops_add_paths",
+      "community": 1,
+      "norm_label": "add_paths()"
+    },
+    {
+      "label": "run_cmd()",
+      "file_type": "code",
+      "source_file": "lib/kk/git/git_ops.rb",
+      "source_location": "L66",
+      "id": "git_git_ops_run_cmd",
+      "community": 1,
+      "norm_label": "run_cmd()"
+    },
+    {
+      "label": "mutating_git_command?()",
+      "file_type": "code",
+      "source_file": "lib/kk/git/git_ops.rb",
+      "source_location": "L82",
+      "id": "git_git_ops_mutating_git_command",
+      "community": 1,
+      "norm_label": "mutating_git_command?()"
+    },
+    {
+      "label": "ensure_ok!()",
+      "file_type": "code",
+      "source_file": "lib/kk/git/git_ops.rb",
+      "source_location": "L86",
+      "id": "git_git_ops_ensure_ok",
+      "community": 1,
+      "norm_label": "ensure_ok!()"
+    },
+    {
+      "label": "in_git_repo?()",
+      "file_type": "code",
+      "source_file": "lib/kk/git/git_ops.rb",
+      "source_location": "L95",
+      "id": "git_git_ops_in_git_repo",
+      "community": 1,
+      "norm_label": "in_git_repo?()"
+    },
+    {
+      "label": "ensure_in_repo!()",
+      "file_type": "code",
+      "source_file": "lib/kk/git/git_ops.rb",
+      "source_location": "L100",
+      "id": "git_git_ops_ensure_in_repo",
+      "community": 1,
+      "norm_label": "ensure_in_repo!()"
+    },
+    {
+      "label": "current_branch()",
+      "file_type": "code",
+      "source_file": "lib/kk/git/git_ops.rb",
+      "source_location": "L104",
+      "id": "git_git_ops_current_branch",
+      "community": 1,
+      "norm_label": "current_branch()"
+    },
+    {
+      "label": "detached_head?()",
+      "file_type": "code",
+      "source_file": "lib/kk/git/git_ops.rb",
+      "source_location": "L110",
+      "id": "git_git_ops_detached_head",
+      "community": 1,
+      "norm_label": "detached_head?()"
+    },
+    {
+      "label": "ensure_not_detached!()",
+      "file_type": "code",
+      "source_file": "lib/kk/git/git_ops.rb",
+      "source_location": "L114",
+      "id": "git_git_ops_ensure_not_detached",
+      "community": 1,
+      "norm_label": "ensure_not_detached!()"
+    },
+    {
+      "label": "working_tree_clean?()",
+      "file_type": "code",
+      "source_file": "lib/kk/git/git_ops.rb",
+      "source_location": "L118",
+      "id": "git_git_ops_working_tree_clean",
+      "community": 1,
+      "norm_label": "working_tree_clean?()"
+    },
+    {
+      "label": "upstream_configured?()",
+      "file_type": "code",
+      "source_file": "lib/kk/git/git_ops.rb",
+      "source_location": "L124",
+      "id": "git_git_ops_upstream_configured",
+      "community": 1,
+      "norm_label": "upstream_configured?()"
+    },
+    {
+      "label": "ahead_count()",
+      "file_type": "code",
+      "source_file": "lib/kk/git/git_ops.rb",
+      "source_location": "L130",
+      "id": "git_git_ops_ahead_count",
+      "community": 1,
+      "norm_label": "ahead_count()"
+    },
+    {
+      "label": "behind_count()",
+      "file_type": "code",
+      "source_file": "lib/kk/git/git_ops.rb",
+      "source_location": "L141",
+      "id": "git_git_ops_behind_count",
+      "community": 1,
+      "norm_label": "behind_count()"
+    },
+    {
+      "label": "unpushed_commits?()",
+      "file_type": "code",
+      "source_file": "lib/kk/git/git_ops.rb",
+      "source_location": "L151",
+      "id": "git_git_ops_unpushed_commits",
+      "community": 1,
+      "norm_label": "unpushed_commits?()"
+    },
+    {
+      "label": "status()",
+      "file_type": "code",
+      "source_file": "lib/kk/git/git_ops.rb",
+      "source_location": "L156",
+      "id": "git_git_ops_status",
+      "community": 1,
+      "norm_label": "status()"
+    },
+    {
+      "label": "status_hash()",
+      "file_type": "code",
+      "source_file": "lib/kk/git/git_ops.rb",
+      "source_location": "L172",
+      "id": "git_git_ops_status_hash",
+      "community": 1,
+      "norm_label": "status_hash()"
+    },
+    {
+      "label": "pull_remote!()",
+      "file_type": "code",
+      "source_file": "lib/kk/git/git_ops.rb",
+      "source_location": "L186",
+      "id": "git_git_ops_pull_remote",
+      "community": 1,
+      "norm_label": "pull_remote!()"
+    },
+    {
+      "label": "push_remote!()",
+      "file_type": "code",
+      "source_file": "lib/kk/git/git_ops.rb",
+      "source_location": "L194",
+      "id": "git_git_ops_push_remote",
+      "community": 1,
+      "norm_label": "push_remote!()"
+    },
+    {
+      "label": "sync_with_remote!()",
+      "file_type": "code",
+      "source_file": "lib/kk/git/git_ops.rb",
+      "source_location": "L207",
+      "id": "git_git_ops_sync_with_remote",
+      "community": 1,
+      "norm_label": "sync_with_remote!()"
+    },
+    {
+      "label": "add_all!()",
+      "file_type": "code",
+      "source_file": "lib/kk/git/git_ops.rb",
+      "source_location": "L213",
+      "id": "git_git_ops_add_all",
+      "community": 1,
+      "norm_label": "add_all!()"
+    },
+    {
+      "label": "commit_with_message!()",
+      "file_type": "code",
+      "source_file": "lib/kk/git/git_ops.rb",
+      "source_location": "L220",
+      "id": "git_git_ops_commit_with_message",
+      "community": 1,
+      "norm_label": "commit_with_message!()"
+    },
+    {
+      "label": "auto_commit_push!()",
+      "file_type": "code",
+      "source_file": "lib/kk/git/git_ops.rb",
+      "source_location": "L242",
+      "id": "git_git_ops_auto_commit_push",
+      "community": 1,
+      "norm_label": "auto_commit_push!()"
+    },
+    {
+      "label": "README.md",
+      "file_type": "document",
+      "source_file": "README.md",
+      "source_location": "L1",
+      "id": "readme_md",
+      "community": 3,
+      "norm_label": "readme.md"
+    },
+    {
+      "label": "kk-git",
+      "file_type": "document",
+      "source_file": "README.md",
+      "source_location": "L1",
+      "id": "kk_git_readme_kk_git",
+      "community": 3,
+      "norm_label": "kk-git"
+    },
+    {
+      "label": "Install (RubyGems)",
+      "file_type": "document",
+      "source_file": "README.md",
+      "source_location": "L8",
+      "id": "kk_git_readme_install_rubygems",
+      "community": 8,
+      "norm_label": "install (rubygems)"
+    },
+    {
+      "label": "Option 1: Global install (recommended)",
+      "file_type": "document",
+      "source_file": "README.md",
+      "source_location": "L10",
+      "id": "kk_git_readme_option_1_global_install_recommended",
+      "community": 8,
+      "norm_label": "option 1: global install (recommended)"
+    },
+    {
+      "label": "code:bash (gem install kk-git)",
+      "file_type": "document",
+      "source_file": "README.md",
+      "source_location": "L12",
+      "id": "kk_git_readme_codeblock_1",
+      "community": 8,
+      "norm_label": "code:bash (gem install kk-git)"
+    },
+    {
+      "label": "Check installed version",
+      "file_type": "document",
+      "source_file": "README.md",
+      "source_location": "L18",
+      "id": "kk_git_readme_check_installed_version",
+      "community": 8,
+      "norm_label": "check installed version"
+    },
+    {
+      "label": "code:bash (kk-git --version)",
+      "file_type": "document",
+      "source_file": "README.md",
+      "source_location": "L20",
+      "id": "kk_git_readme_codeblock_2",
+      "community": 8,
+      "norm_label": "code:bash (kk-git --version)"
+    },
+    {
+      "label": "Option 2: Add to your project",
+      "file_type": "document",
+      "source_file": "README.md",
+      "source_location": "L24",
+      "id": "kk_git_readme_option_2_add_to_your_project",
+      "community": 8,
+      "norm_label": "option 2: add to your project"
+    },
+    {
+      "label": "code:ruby (# Gemfile)",
+      "file_type": "document",
+      "source_file": "README.md",
+      "source_location": "L26",
+      "id": "kk_git_readme_codeblock_3",
+      "community": 8,
+      "norm_label": "code:ruby (# gemfile)"
+    },
+    {
+      "label": "CLI",
+      "file_type": "document",
+      "source_file": "README.md",
+      "source_location": "L31",
+      "id": "kk_git_readme_cli",
+      "community": 3,
+      "norm_label": "cli"
+    },
+    {
+      "label": "code:bash (kk-git commit-message --worktree   # \u4ece\u5de5\u4f5c\u533a\u751f\u6210 commit message)",
+      "file_type": "document",
+      "source_file": "README.md",
+      "source_location": "L33",
+      "id": "kk_git_readme_codeblock_4",
+      "community": 3,
+      "norm_label": "code:bash (kk-git commit-message --worktree   # \u4ece\u5de5\u4f5c\u533a\u751f\u6210 commit message)"
+    },
+    {
+      "label": "code:bash (ruby -Ilib exe/kk-git commit-message --worktree)",
+      "file_type": "document",
+      "source_file": "README.md",
+      "source_location": "L45",
+      "id": "kk_git_readme_codeblock_5",
+      "community": 3,
+      "norm_label": "code:bash (ruby -ilib exe/kk-git commit-message --worktree)"
+    },
+    {
+      "label": "code:bash (kk-git commit-message --worktree --type chore --scope tools )",
+      "file_type": "document",
+      "source_file": "README.md",
+      "source_location": "L53",
+      "id": "kk_git_readme_codeblock_6",
+      "community": 3,
+      "norm_label": "code:bash (kk-git commit-message --worktree --type chore --scope tools )"
+    },
+    {
+      "label": "code:bash (kk-git commit-message --worktree --format json)",
+      "file_type": "document",
+      "source_file": "README.md",
+      "source_location": "L59",
+      "id": "kk_git_readme_codeblock_7",
+      "community": 3,
+      "norm_label": "code:bash (kk-git commit-message --worktree --format json)"
+    },
+    {
+      "label": "Rake",
+      "file_type": "document",
+      "source_file": "README.md",
+      "source_location": "L63",
+      "id": "kk_git_readme_rake",
+      "community": 3,
+      "norm_label": "rake"
+    },
+    {
+      "label": "code:ruby (# Rakefile)",
+      "file_type": "document",
+      "source_file": "README.md",
+      "source_location": "L67",
+      "id": "kk_git_readme_codeblock_8",
+      "community": 3,
+      "norm_label": "code:ruby (# rakefile)"
+    },
+    {
+      "label": "code:bash (rake git:status                  # \u5206\u652f\u540c\u6b65\u72b6\u6001)",
+      "file_type": "document",
+      "source_file": "README.md",
+      "source_location": "L79",
+      "id": "kk_git_readme_codeblock_9",
+      "community": 3,
+      "norm_label": "code:bash (rake git:status                  # \u5206\u652f\u540c\u6b65\u72b6\u6001)"
+    },
+    {
+      "label": "`git:auto_commit_push` / `kk-git push` behavior",
+      "file_type": "document",
+      "source_file": "README.md",
+      "source_location": "L88",
+      "id": "kk_git_readme_git_auto_commit_push_kk_git_push_behavior",
+      "community": 3,
+      "norm_label": "`git:auto_commit_push` / `kk-git push` behavior"
+    },
+    {
+      "label": "Environment variables",
+      "file_type": "document",
+      "source_file": "README.md",
+      "source_location": "L100",
+      "id": "kk_git_readme_environment_variables",
+      "community": 3,
+      "norm_label": "environment variables"
+    },
+    {
+      "label": "Remote / sync",
+      "file_type": "document",
+      "source_file": "README.md",
+      "source_location": "L102",
+      "id": "kk_git_readme_remote_sync",
+      "community": 3,
+      "norm_label": "remote / sync"
+    },
+    {
+      "label": "Commit message overrides",
+      "file_type": "document",
+      "source_file": "README.md",
+      "source_location": "L115",
+      "id": "kk_git_readme_commit_message_overrides",
+      "community": 3,
+      "norm_label": "commit message overrides"
+    },
+    {
+      "label": "Programmatic API",
+      "file_type": "document",
+      "source_file": "README.md",
+      "source_location": "L125",
+      "id": "kk_git_readme_programmatic_api",
+      "community": 3,
+      "norm_label": "programmatic api"
+    },
+    {
+      "label": "code:ruby (require 'kk/git')",
+      "file_type": "document",
+      "source_file": "README.md",
+      "source_location": "L127",
+      "id": "kk_git_readme_codeblock_10",
+      "community": 3,
+      "norm_label": "code:ruby (require 'kk/git')"
+    },
+    {
+      "label": "Safety notes",
+      "file_type": "document",
+      "source_file": "README.md",
+      "source_location": "L142",
+      "id": "kk_git_readme_safety_notes",
+      "community": 3,
+      "norm_label": "safety notes"
+    },
+    {
+      "label": "Test",
+      "file_type": "document",
+      "source_file": "README.md",
+      "source_location": "L150",
+      "id": "kk_git_readme_test",
+      "community": 3,
+      "norm_label": "test"
+    },
+    {
+      "label": "code:bash (ruby scripts/test.rb)",
+      "file_type": "document",
+      "source_file": "README.md",
+      "source_location": "L152",
+      "id": "kk_git_readme_codeblock_11",
+      "community": 3,
+      "norm_label": "code:bash (ruby scripts/test.rb)"
+    },
+    {
+      "label": "Release to RubyGems (GitHub Actions)",
+      "file_type": "document",
+      "source_file": "README.md",
+      "source_location": "L156",
+      "id": "kk_git_readme_release_to_rubygems_github_actions",
+      "community": 3,
+      "norm_label": "release to rubygems (github actions)"
+    },
+    {
+      "label": "1) Configure Secret",
+      "file_type": "document",
+      "source_file": "README.md",
+      "source_location": "L160",
+      "id": "kk_git_readme_1_configure_secret",
+      "community": 3,
+      "norm_label": "1) configure secret"
+    },
+    {
+      "label": "2) Create a tag to release",
+      "file_type": "document",
+      "source_file": "README.md",
+      "source_location": "L166",
+      "id": "kk_git_readme_2_create_a_tag_to_release",
+      "community": 3,
+      "norm_label": "2) create a tag to release"
+    },
+    {
+      "label": "code:bash (# Example: release 0.2.0)",
+      "file_type": "document",
+      "source_file": "README.md",
+      "source_location": "L168",
+      "id": "kk_git_readme_codeblock_12",
+      "community": 3,
+      "norm_label": "code:bash (# example: release 0.2.0)"
+    },
+    {
+      "label": "r.md",
+      "file_type": "document",
+      "source_file": "r.md",
+      "source_location": "L1",
+      "id": "r_md",
+      "community": 9,
+      "norm_label": "r.md"
+    },
+    {
+      "label": "Goal",
+      "file_type": "document",
+      "source_file": "r.md",
+      "source_location": "L1",
+      "id": "kk_git_r_goal",
+      "community": 9,
+      "norm_label": "goal"
+    },
+    {
+      "label": "Implementation",
+      "file_type": "document",
+      "source_file": "r.md",
+      "source_location": "L5",
+      "id": "kk_git_r_implementation",
+      "community": 9,
+      "norm_label": "implementation"
+    },
+    {
+      "label": "Examples",
+      "file_type": "document",
+      "source_file": "r.md",
+      "source_location": "L15",
+      "id": "kk_git_r_examples",
+      "community": 9,
+      "norm_label": "examples"
+    },
+    {
+      "label": "code:bash (# Worktree (includes untracked))",
+      "file_type": "document",
+      "source_file": "r.md",
+      "source_location": "L17",
+      "id": "kk_git_r_codeblock_1",
+      "community": 9,
+      "norm_label": "code:bash (# worktree (includes untracked))"
+    },
+    {
+      "label": "AGENTS.md",
+      "file_type": "document",
+      "source_file": "AGENTS.md",
+      "source_location": "L1",
+      "id": "agents_md",
+      "community": 11,
+      "norm_label": "agents.md"
+    },
+    {
+      "label": "OpenSpec Instructions",
+      "file_type": "document",
+      "source_file": "AGENTS.md",
+      "source_location": "L2",
+      "id": "kk_git_agents_openspec_instructions",
+      "community": 11,
+      "norm_label": "openspec instructions"
+    },
+    {
+      "label": "project.md",
+      "file_type": "document",
+      "source_file": "openspec/project.md",
+      "source_location": "L1",
+      "id": "openspec_project_md",
+      "community": 4,
+      "norm_label": "project.md"
+    },
+    {
+      "label": "Project Context",
+      "file_type": "document",
+      "source_file": "openspec/project.md",
+      "source_location": "L1",
+      "id": "openspec_project_project_context",
+      "community": 4,
+      "norm_label": "project context"
+    },
+    {
+      "label": "Purpose",
+      "file_type": "document",
+      "source_file": "openspec/project.md",
+      "source_location": "L3",
+      "id": "openspec_project_purpose",
+      "community": 4,
+      "norm_label": "purpose"
+    },
+    {
+      "label": "Tech Stack",
+      "file_type": "document",
+      "source_file": "openspec/project.md",
+      "source_location": "L6",
+      "id": "openspec_project_tech_stack",
+      "community": 4,
+      "norm_label": "tech stack"
+    },
+    {
+      "label": "Project Conventions",
+      "file_type": "document",
+      "source_file": "openspec/project.md",
+      "source_location": "L10",
+      "id": "openspec_project_project_conventions",
+      "community": 4,
+      "norm_label": "project conventions"
+    },
+    {
+      "label": "Code Style",
+      "file_type": "document",
+      "source_file": "openspec/project.md",
+      "source_location": "L12",
+      "id": "openspec_project_code_style",
+      "community": 4,
+      "norm_label": "code style"
+    },
+    {
+      "label": "Architecture Patterns",
+      "file_type": "document",
+      "source_file": "openspec/project.md",
+      "source_location": "L15",
+      "id": "openspec_project_architecture_patterns",
+      "community": 4,
+      "norm_label": "architecture patterns"
+    },
+    {
+      "label": "Testing Strategy",
+      "file_type": "document",
+      "source_file": "openspec/project.md",
+      "source_location": "L18",
+      "id": "openspec_project_testing_strategy",
+      "community": 4,
+      "norm_label": "testing strategy"
+    },
+    {
+      "label": "Git Workflow",
+      "file_type": "document",
+      "source_file": "openspec/project.md",
+      "source_location": "L21",
+      "id": "openspec_project_git_workflow",
+      "community": 4,
+      "norm_label": "git workflow"
+    },
+    {
+      "label": "Domain Context",
+      "file_type": "document",
+      "source_file": "openspec/project.md",
+      "source_location": "L24",
+      "id": "openspec_project_domain_context",
+      "community": 4,
+      "norm_label": "domain context"
+    },
+    {
+      "label": "Important Constraints",
+      "file_type": "document",
+      "source_file": "openspec/project.md",
+      "source_location": "L27",
+      "id": "openspec_project_important_constraints",
+      "community": 4,
+      "norm_label": "important constraints"
+    },
+    {
+      "label": "External Dependencies",
+      "file_type": "document",
+      "source_file": "openspec/project.md",
+      "source_location": "L30",
+      "id": "openspec_project_external_dependencies",
+      "community": 4,
+      "norm_label": "external dependencies"
+    },
+    {
+      "label": "AGENTS.md",
+      "file_type": "document",
+      "source_file": "openspec/AGENTS.md",
+      "source_location": "L1",
+      "id": "openspec_agents_md",
+      "community": 0,
+      "norm_label": "agents.md"
+    },
+    {
+      "label": "OpenSpec Instructions",
+      "file_type": "document",
+      "source_file": "openspec/AGENTS.md",
+      "source_location": "L1",
+      "id": "openspec_agents_openspec_instructions",
+      "community": 0,
+      "norm_label": "openspec instructions"
+    },
+    {
+      "label": "TL;DR Quick Checklist",
+      "file_type": "document",
+      "source_file": "openspec/AGENTS.md",
+      "source_location": "L5",
+      "id": "openspec_agents_tl_dr_quick_checklist",
+      "community": 0,
+      "norm_label": "tl;dr quick checklist"
+    },
+    {
+      "label": "Three-Stage Workflow",
+      "file_type": "document",
+      "source_file": "openspec/AGENTS.md",
+      "source_location": "L15",
+      "id": "openspec_agents_three_stage_workflow",
+      "community": 0,
+      "norm_label": "three-stage workflow"
+    },
+    {
+      "label": "Stage 1: Creating Changes",
+      "file_type": "document",
+      "source_file": "openspec/AGENTS.md",
+      "source_location": "L17",
+      "id": "openspec_agents_stage_1_creating_changes",
+      "community": 0,
+      "norm_label": "stage 1: creating changes"
+    },
+    {
+      "label": "Stage 2: Implementing Changes",
+      "file_type": "document",
+      "source_file": "openspec/AGENTS.md",
+      "source_location": "L49",
+      "id": "openspec_agents_stage_2_implementing_changes",
+      "community": 0,
+      "norm_label": "stage 2: implementing changes"
+    },
+    {
+      "label": "Stage 3: Archiving Changes",
+      "file_type": "document",
+      "source_file": "openspec/AGENTS.md",
+      "source_location": "L59",
+      "id": "openspec_agents_stage_3_archiving_changes",
+      "community": 0,
+      "norm_label": "stage 3: archiving changes"
+    },
+    {
+      "label": "Before Any Task",
+      "file_type": "document",
+      "source_file": "openspec/AGENTS.md",
+      "source_location": "L66",
+      "id": "openspec_agents_before_any_task",
+      "community": 0,
+      "norm_label": "before any task"
+    },
+    {
+      "label": "Search Guidance",
+      "file_type": "document",
+      "source_file": "openspec/AGENTS.md",
+      "source_location": "L81",
+      "id": "openspec_agents_search_guidance",
+      "community": 0,
+      "norm_label": "search guidance"
+    },
+    {
+      "label": "Quick Start",
+      "file_type": "document",
+      "source_file": "openspec/AGENTS.md",
+      "source_location": "L89",
+      "id": "openspec_agents_quick_start",
+      "community": 0,
+      "norm_label": "quick start"
+    },
+    {
+      "label": "CLI Commands",
+      "file_type": "document",
+      "source_file": "openspec/AGENTS.md",
+      "source_location": "L91",
+      "id": "openspec_agents_cli_commands",
+      "community": 0,
+      "norm_label": "cli commands"
+    },
+    {
+      "label": "code:bash (# Essential commands)",
+      "file_type": "document",
+      "source_file": "openspec/AGENTS.md",
+      "source_location": "L93",
+      "id": "openspec_agents_codeblock_1",
+      "community": 0,
+      "norm_label": "code:bash (# essential commands)"
+    },
+    {
+      "label": "Command Flags",
+      "file_type": "document",
+      "source_file": "openspec/AGENTS.md",
+      "source_location": "L114",
+      "id": "openspec_agents_command_flags",
+      "community": 0,
+      "norm_label": "command flags"
+    },
+    {
+      "label": "Directory Structure",
+      "file_type": "document",
+      "source_file": "openspec/AGENTS.md",
+      "source_location": "L123",
+      "id": "openspec_agents_directory_structure",
+      "community": 0,
+      "norm_label": "directory structure"
+    },
+    {
+      "label": "code:block2 (openspec/)",
+      "file_type": "document",
+      "source_file": "openspec/AGENTS.md",
+      "source_location": "L125",
+      "id": "openspec_agents_codeblock_2",
+      "community": 0,
+      "norm_label": "code:block2 (openspec/)"
+    },
+    {
+      "label": "Creating Change Proposals",
+      "file_type": "document",
+      "source_file": "openspec/AGENTS.md",
+      "source_location": "L143",
+      "id": "openspec_agents_creating_change_proposals",
+      "community": 6,
+      "norm_label": "creating change proposals"
+    },
+    {
+      "label": "Decision Tree",
+      "file_type": "document",
+      "source_file": "openspec/AGENTS.md",
+      "source_location": "L145",
+      "id": "openspec_agents_decision_tree",
+      "community": 6,
+      "norm_label": "decision tree"
+    },
+    {
+      "label": "code:block3 (New request?)",
+      "file_type": "document",
+      "source_file": "openspec/AGENTS.md",
+      "source_location": "L147",
+      "id": "openspec_agents_codeblock_3",
+      "community": 6,
+      "norm_label": "code:block3 (new request?)"
+    },
+    {
+      "label": "Proposal Structure",
+      "file_type": "document",
+      "source_file": "openspec/AGENTS.md",
+      "source_location": "L157",
+      "id": "openspec_agents_proposal_structure",
+      "community": 6,
+      "norm_label": "proposal structure"
+    },
+    {
+      "label": "code:markdown (# Change: [Brief description of change])",
+      "file_type": "document",
+      "source_file": "openspec/AGENTS.md",
+      "source_location": "L162",
+      "id": "openspec_agents_codeblock_4",
+      "community": 6,
+      "norm_label": "code:markdown (# change: [brief description of change])"
+    },
+    {
+      "label": "code:markdown (## ADDED Requirements)",
+      "file_type": "document",
+      "source_file": "openspec/AGENTS.md",
+      "source_location": "L178",
+      "id": "openspec_agents_codeblock_5",
+      "community": 6,
+      "norm_label": "code:markdown (## added requirements)"
+    },
+    {
+      "label": "code:markdown (## 1. Implementation)",
+      "file_type": "document",
+      "source_file": "openspec/AGENTS.md",
+      "source_location": "L199",
+      "id": "openspec_agents_codeblock_6",
+      "community": 6,
+      "norm_label": "code:markdown (## 1. implementation)"
+    },
+    {
+      "label": "code:markdown (## Context)",
+      "file_type": "document",
+      "source_file": "openspec/AGENTS.md",
+      "source_location": "L215",
+      "id": "openspec_agents_codeblock_7",
+      "community": 6,
+      "norm_label": "code:markdown (## context)"
+    },
+    {
+      "label": "Spec File Format",
+      "file_type": "document",
+      "source_file": "openspec/AGENTS.md",
+      "source_location": "L237",
+      "id": "openspec_agents_spec_file_format",
+      "community": 7,
+      "norm_label": "spec file format"
+    },
+    {
+      "label": "Critical: Scenario Formatting",
+      "file_type": "document",
+      "source_file": "openspec/AGENTS.md",
+      "source_location": "L239",
+      "id": "openspec_agents_critical_scenario_formatting",
+      "community": 7,
+      "norm_label": "critical: scenario formatting"
+    },
+    {
+      "label": "code:markdown (#### Scenario: User login success)",
+      "file_type": "document",
+      "source_file": "openspec/AGENTS.md",
+      "source_location": "L242",
+      "id": "openspec_agents_codeblock_8",
+      "community": 7,
+      "norm_label": "code:markdown (#### scenario: user login success)"
+    },
+    {
+      "label": "code:markdown (- **Scenario: User login**  \u274c)",
+      "file_type": "document",
+      "source_file": "openspec/AGENTS.md",
+      "source_location": "L249",
+      "id": "openspec_agents_codeblock_9",
+      "community": 7,
+      "norm_label": "code:markdown (- **scenario: user login**  \u274c)"
+    },
+    {
+      "label": "Requirement Wording",
+      "file_type": "document",
+      "source_file": "openspec/AGENTS.md",
+      "source_location": "L257",
+      "id": "openspec_agents_requirement_wording",
+      "community": 7,
+      "norm_label": "requirement wording"
+    },
+    {
+      "label": "Delta Operations",
+      "file_type": "document",
+      "source_file": "openspec/AGENTS.md",
+      "source_location": "L260",
+      "id": "openspec_agents_delta_operations",
+      "community": 7,
+      "norm_label": "delta operations"
+    },
+    {
+      "label": "When to use ADDED vs MODIFIED",
+      "file_type": "document",
+      "source_file": "openspec/AGENTS.md",
+      "source_location": "L269",
+      "id": "openspec_agents_when_to_use_added_vs_modified",
+      "community": 7,
+      "norm_label": "when to use added vs modified"
+    },
+    {
+      "label": "code:markdown (## RENAMED Requirements)",
+      "file_type": "document",
+      "source_file": "openspec/AGENTS.md",
+      "source_location": "L283",
+      "id": "openspec_agents_codeblock_10",
+      "community": 7,
+      "norm_label": "code:markdown (## renamed requirements)"
+    },
+    {
+      "label": "Troubleshooting",
+      "file_type": "document",
+      "source_file": "openspec/AGENTS.md",
+      "source_location": "L289",
+      "id": "openspec_agents_troubleshooting",
+      "community": 0,
+      "norm_label": "troubleshooting"
+    },
+    {
+      "label": "Common Errors",
+      "file_type": "document",
+      "source_file": "openspec/AGENTS.md",
+      "source_location": "L291",
+      "id": "openspec_agents_common_errors",
+      "community": 0,
+      "norm_label": "common errors"
+    },
+    {
+      "label": "Validation Tips",
+      "file_type": "document",
+      "source_file": "openspec/AGENTS.md",
+      "source_location": "L305",
+      "id": "openspec_agents_validation_tips",
+      "community": 0,
+      "norm_label": "validation tips"
+    },
+    {
+      "label": "code:bash (# Always use strict mode for comprehensive checks)",
+      "file_type": "document",
+      "source_file": "openspec/AGENTS.md",
+      "source_location": "L307",
+      "id": "openspec_agents_codeblock_11",
+      "community": 0,
+      "norm_label": "code:bash (# always use strict mode for comprehensive checks)"
+    },
+    {
+      "label": "Happy Path Script",
+      "file_type": "document",
+      "source_file": "openspec/AGENTS.md",
+      "source_location": "L318",
+      "id": "openspec_agents_happy_path_script",
+      "community": 0,
+      "norm_label": "happy path script"
+    },
+    {
+      "label": "code:bash (# 1) Explore current state)",
+      "file_type": "document",
+      "source_file": "openspec/AGENTS.md",
+      "source_location": "L320",
+      "id": "openspec_agents_codeblock_12",
+      "community": 0,
+      "norm_label": "code:bash (# 1) explore current state)"
+    },
+    {
+      "label": "Multi-Capability Example",
+      "file_type": "document",
+      "source_file": "openspec/AGENTS.md",
+      "source_location": "L349",
+      "id": "openspec_agents_multi_capability_example",
+      "community": 0,
+      "norm_label": "multi-capability example"
+    },
+    {
+      "label": "code:block13 (openspec/changes/add-2fa-notify/)",
+      "file_type": "document",
+      "source_file": "openspec/AGENTS.md",
+      "source_location": "L351",
+      "id": "openspec_agents_codeblock_13",
+      "community": 0,
+      "norm_label": "code:block13 (openspec/changes/add-2fa-notify/)"
+    },
+    {
+      "label": "code:markdown (## ADDED Requirements)",
+      "file_type": "document",
+      "source_file": "openspec/AGENTS.md",
+      "source_location": "L363",
+      "id": "openspec_agents_codeblock_14",
+      "community": 0,
+      "norm_label": "code:markdown (## added requirements)"
+    },
+    {
+      "label": "code:markdown (## ADDED Requirements)",
+      "file_type": "document",
+      "source_file": "openspec/AGENTS.md",
+      "source_location": "L370",
+      "id": "openspec_agents_codeblock_15",
+      "community": 0,
+      "norm_label": "code:markdown (## added requirements)"
+    },
+    {
+      "label": "Best Practices",
+      "file_type": "document",
+      "source_file": "openspec/AGENTS.md",
+      "source_location": "L376",
+      "id": "openspec_agents_best_practices",
+      "community": 0,
+      "norm_label": "best practices"
+    },
+    {
+      "label": "Simplicity First",
+      "file_type": "document",
+      "source_file": "openspec/AGENTS.md",
+      "source_location": "L378",
+      "id": "openspec_agents_simplicity_first",
+      "community": 0,
+      "norm_label": "simplicity first"
+    },
+    {
+      "label": "Complexity Triggers",
+      "file_type": "document",
+      "source_file": "openspec/AGENTS.md",
+      "source_location": "L384",
+      "id": "openspec_agents_complexity_triggers",
+      "community": 0,
+      "norm_label": "complexity triggers"
+    },
+    {
+      "label": "Clear References",
+      "file_type": "document",
+      "source_file": "openspec/AGENTS.md",
+      "source_location": "L390",
+      "id": "openspec_agents_clear_references",
+      "community": 0,
+      "norm_label": "clear references"
+    },
+    {
+      "label": "Capability Naming",
+      "file_type": "document",
+      "source_file": "openspec/AGENTS.md",
+      "source_location": "L395",
+      "id": "openspec_agents_capability_naming",
+      "community": 0,
+      "norm_label": "capability naming"
+    },
+    {
+      "label": "Change ID Naming",
+      "file_type": "document",
+      "source_file": "openspec/AGENTS.md",
+      "source_location": "L401",
+      "id": "openspec_agents_change_id_naming",
+      "community": 0,
+      "norm_label": "change id naming"
+    },
+    {
+      "label": "Tool Selection Guide",
+      "file_type": "document",
+      "source_file": "openspec/AGENTS.md",
+      "source_location": "L406",
+      "id": "openspec_agents_tool_selection_guide",
+      "community": 0,
+      "norm_label": "tool selection guide"
+    },
+    {
+      "label": "Error Recovery",
+      "file_type": "document",
+      "source_file": "openspec/AGENTS.md",
+      "source_location": "L415",
+      "id": "openspec_agents_error_recovery",
+      "community": 0,
+      "norm_label": "error recovery"
+    },
+    {
+      "label": "Change Conflicts",
+      "file_type": "document",
+      "source_file": "openspec/AGENTS.md",
+      "source_location": "L417",
+      "id": "openspec_agents_change_conflicts",
+      "community": 0,
+      "norm_label": "change conflicts"
+    },
+    {
+      "label": "Validation Failures",
+      "file_type": "document",
+      "source_file": "openspec/AGENTS.md",
+      "source_location": "L423",
+      "id": "openspec_agents_validation_failures",
+      "community": 0,
+      "norm_label": "validation failures"
+    },
+    {
+      "label": "Missing Context",
+      "file_type": "document",
+      "source_file": "openspec/AGENTS.md",
+      "source_location": "L429",
+      "id": "openspec_agents_missing_context",
+      "community": 0,
+      "norm_label": "missing context"
+    },
+    {
+      "label": "Quick Reference",
+      "file_type": "document",
+      "source_file": "openspec/AGENTS.md",
+      "source_location": "L435",
+      "id": "openspec_agents_quick_reference",
+      "community": 10,
+      "norm_label": "quick reference"
+    },
+    {
+      "label": "Stage Indicators",
+      "file_type": "document",
+      "source_file": "openspec/AGENTS.md",
+      "source_location": "L437",
+      "id": "openspec_agents_stage_indicators",
+      "community": 10,
+      "norm_label": "stage indicators"
+    },
+    {
+      "label": "File Purposes",
+      "file_type": "document",
+      "source_file": "openspec/AGENTS.md",
+      "source_location": "L442",
+      "id": "openspec_agents_file_purposes",
+      "community": 10,
+      "norm_label": "file purposes"
+    },
+    {
+      "label": "CLI Essentials",
+      "file_type": "document",
+      "source_file": "openspec/AGENTS.md",
+      "source_location": "L448",
+      "id": "openspec_agents_cli_essentials",
+      "community": 10,
+      "norm_label": "cli essentials"
+    },
+    {
+      "label": "code:bash (openspec list              # What's in progress?)",
+      "file_type": "document",
+      "source_file": "openspec/AGENTS.md",
+      "source_location": "L449",
+      "id": "openspec_agents_codeblock_16",
+      "community": 10,
+      "norm_label": "code:bash (openspec list              # what's in progress?)"
+    }
+  ],
+  "links": [
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "scripts/test.rb",
+      "source_location": "L9",
+      "weight": 1.0,
+      "source": "scripts_test_rb",
+      "target": "scripts_test_testrunner",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "scripts/test.rb",
+      "source_location": "L10",
+      "weight": 1.0,
+      "source": "scripts_test_testrunner",
+      "target": "scripts_test_testrunner_initialize",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "scripts/test.rb",
+      "source_location": "L16",
+      "weight": 1.0,
+      "source": "scripts_test_testrunner",
+      "target": "scripts_test_testrunner_run",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "scripts/test.rb",
+      "source_location": "L27",
+      "weight": 1.0,
+      "source": "scripts_test_testrunner",
+      "target": "scripts_test_testrunner_load_kkgit",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "scripts/test.rb",
+      "source_location": "L32",
+      "weight": 1.0,
+      "source": "scripts_test_testrunner",
+      "target": "scripts_test_testrunner_assert",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "scripts/test.rb",
+      "source_location": "L36",
+      "weight": 1.0,
+      "source": "scripts_test_testrunner",
+      "target": "scripts_test_testrunner_test_commit_message_inference",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "scripts/test.rb",
+      "source_location": "L62",
+      "weight": 1.0,
+      "source": "scripts_test_testrunner",
+      "target": "scripts_test_testrunner_test_git_ops_in_temp_repo",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "scripts/test.rb",
+      "source_location": "L93",
+      "weight": 1.0,
+      "source": "scripts_test_testrunner",
+      "target": "scripts_test_testrunner_init_repo",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "scripts/test.rb",
+      "source_location": "L99",
+      "weight": 1.0,
+      "source": "scripts_test_testrunner",
+      "target": "scripts_test_testrunner_write_file",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "scripts/test.rb",
+      "source_location": "L105",
+      "weight": 1.0,
+      "source": "scripts_test_testrunner",
+      "target": "scripts_test_testrunner_run_git",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "scripts/test.rb",
+      "source_location": "L112",
+      "weight": 1.0,
+      "source": "scripts_test_testrunner",
+      "target": "scripts_test_testrunner_print_results",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "scripts/test.rb",
+      "source_location": "L46",
+      "weight": 1.0,
+      "source": "scripts_test_testrunner_test_commit_message_inference",
+      "target": "scripts_test_testrunner_assert",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "scripts/test.rb",
+      "source_location": "L74",
+      "weight": 1.0,
+      "source": "scripts_test_testrunner_test_git_ops_in_temp_repo",
+      "target": "scripts_test_testrunner_assert",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "scripts/test.rb",
+      "source_location": "L41",
+      "weight": 1.0,
+      "source": "scripts_test_testrunner_test_commit_message_inference",
+      "target": "scripts_test_testrunner_init_repo",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "scripts/test.rb",
+      "source_location": "L42",
+      "weight": 1.0,
+      "source": "scripts_test_testrunner_test_commit_message_inference",
+      "target": "scripts_test_testrunner_write_file",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "scripts/test.rb",
+      "source_location": "L43",
+      "weight": 1.0,
+      "source": "scripts_test_testrunner_test_commit_message_inference",
+      "target": "scripts_test_testrunner_run_git",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
+      "source_file": "scripts/test.rb",
+      "source_location": "L45",
+      "weight": 1.0,
+      "source": "scripts_test_testrunner_test_commit_message_inference",
+      "target": "git_commit_message_commitmessage_generate"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
+      "source_file": "scripts/test.rb",
+      "source_location": "L54",
+      "weight": 1.0,
+      "source": "scripts_test_testrunner_test_commit_message_inference",
+      "target": "git_commit_message_commitmessage_generate_hash"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "scripts/test.rb",
+      "source_location": "L67",
+      "weight": 1.0,
+      "source": "scripts_test_testrunner_test_git_ops_in_temp_repo",
+      "target": "scripts_test_testrunner_init_repo",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "scripts/test.rb",
+      "source_location": "L68",
+      "weight": 1.0,
+      "source": "scripts_test_testrunner_test_git_ops_in_temp_repo",
+      "target": "scripts_test_testrunner_write_file",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "scripts/test.rb",
+      "source_location": "L69",
+      "weight": 1.0,
+      "source": "scripts_test_testrunner_test_git_ops_in_temp_repo",
+      "target": "scripts_test_testrunner_run_git",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
+      "source_file": "scripts/test.rb",
+      "source_location": "L73",
+      "weight": 1.0,
+      "source": "scripts_test_testrunner_test_git_ops_in_temp_repo",
+      "target": "git_git_ops_status"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
+      "source_file": "scripts/test.rb",
+      "source_location": "L79",
+      "weight": 1.0,
+      "source": "scripts_test_testrunner_test_git_ops_in_temp_repo",
+      "target": "git_git_ops_working_tree_clean"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
+      "source_file": "scripts/test.rb",
+      "source_location": "L82",
+      "weight": 1.0,
+      "source": "scripts_test_testrunner_test_git_ops_in_temp_repo",
+      "target": "git_git_ops_auto_commit_push"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "scripts/test.rb",
+      "source_location": "L94",
+      "weight": 1.0,
+      "source": "scripts_test_testrunner_init_repo",
+      "target": "scripts_test_testrunner_run_git",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "lib/kk/git/commit_message.rb",
+      "source_location": "L12",
+      "weight": 1.0,
+      "source": "lib_kk_git_commit_message_rb",
+      "target": "git_commit_message_commitmessage",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "lib/kk/git/commit_message.rb",
+      "source_location": "L41",
+      "weight": 1.0,
+      "source": "git_commit_message_commitmessage",
+      "target": "git_commit_message_commitmessage_generate",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "lib/kk/git/commit_message.rb",
+      "source_location": "L75",
+      "weight": 1.0,
+      "source": "git_commit_message_commitmessage",
+      "target": "git_commit_message_commitmessage_generate_hash",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "lib/kk/git/commit_message.rb",
+      "source_location": "L118",
+      "weight": 1.0,
+      "source": "git_commit_message_commitmessage",
+      "target": "git_commit_message_commitmessage_collect_changes",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "lib/kk/git/commit_message.rb",
+      "source_location": "L143",
+      "weight": 1.0,
+      "source": "git_commit_message_commitmessage",
+      "target": "git_commit_message_commitmessage_parse_name_status_z",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "lib/kk/git/commit_message.rb",
+      "source_location": "L171",
+      "weight": 1.0,
+      "source": "git_commit_message_commitmessage",
+      "target": "git_commit_message_commitmessage_normalize_and_dedup",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "lib/kk/git/commit_message.rb",
+      "source_location": "L196",
+      "weight": 1.0,
+      "source": "git_commit_message_commitmessage",
+      "target": "git_commit_message_commitmessage_change_priority",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "lib/kk/git/commit_message.rb",
+      "source_location": "L213",
+      "weight": 1.0,
+      "source": "git_commit_message_commitmessage",
+      "target": "git_commit_message_commitmessage_run_git",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "lib/kk/git/commit_message.rb",
+      "source_location": "L227",
+      "weight": 1.0,
+      "source": "git_commit_message_commitmessage",
+      "target": "git_commit_message_commitmessage_infer",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "lib/kk/git/commit_message.rb",
+      "source_location": "L237",
+      "weight": 1.0,
+      "source": "git_commit_message_commitmessage",
+      "target": "git_commit_message_commitmessage_pick_main_type",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "lib/kk/git/commit_message.rb",
+      "source_location": "L241",
+      "weight": 1.0,
+      "source": "git_commit_message_commitmessage",
+      "target": "git_commit_message_commitmessage_pick_scope",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "lib/kk/git/commit_message.rb",
+      "source_location": "L252",
+      "weight": 1.0,
+      "source": "git_commit_message_commitmessage",
+      "target": "git_commit_message_commitmessage_infer_scope",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "lib/kk/git/commit_message.rb",
+      "source_location": "L268",
+      "weight": 1.0,
+      "source": "git_commit_message_commitmessage",
+      "target": "git_commit_message_commitmessage_top_level_scope",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "lib/kk/git/commit_message.rb",
+      "source_location": "L277",
+      "weight": 1.0,
+      "source": "git_commit_message_commitmessage",
+      "target": "git_commit_message_commitmessage_infer_type",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "lib/kk/git/commit_message.rb",
+      "source_location": "L313",
+      "weight": 1.0,
+      "source": "git_commit_message_commitmessage",
+      "target": "git_commit_message_commitmessage_type_by_path",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "lib/kk/git/commit_message.rb",
+      "source_location": "L328",
+      "weight": 1.0,
+      "source": "git_commit_message_commitmessage",
+      "target": "git_commit_message_commitmessage_doc_path",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "lib/kk/git/commit_message.rb",
+      "source_location": "L335",
+      "weight": 1.0,
+      "source": "git_commit_message_commitmessage",
+      "target": "git_commit_message_commitmessage_ci_path",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "lib/kk/git/commit_message.rb",
+      "source_location": "L343",
+      "weight": 1.0,
+      "source": "git_commit_message_commitmessage",
+      "target": "git_commit_message_commitmessage_test_path",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "lib/kk/git/commit_message.rb",
+      "source_location": "L351",
+      "weight": 1.0,
+      "source": "git_commit_message_commitmessage",
+      "target": "git_commit_message_commitmessage_deps_path",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "lib/kk/git/commit_message.rb",
+      "source_location": "L363",
+      "weight": 1.0,
+      "source": "git_commit_message_commitmessage",
+      "target": "git_commit_message_commitmessage_build_path",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "lib/kk/git/commit_message.rb",
+      "source_location": "L371",
+      "weight": 1.0,
+      "source": "git_commit_message_commitmessage",
+      "target": "git_commit_message_commitmessage_config_path",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "lib/kk/git/commit_message.rb",
+      "source_location": "L384",
+      "weight": 1.0,
+      "source": "git_commit_message_commitmessage",
+      "target": "git_commit_message_commitmessage_script_path",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "lib/kk/git/commit_message.rb",
+      "source_location": "L391",
+      "weight": 1.0,
+      "source": "git_commit_message_commitmessage",
+      "target": "git_commit_message_commitmessage_tooling_path",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "lib/kk/git/commit_message.rb",
+      "source_location": "L402",
+      "weight": 1.0,
+      "source": "git_commit_message_commitmessage",
+      "target": "git_commit_message_commitmessage_code_path",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "lib/kk/git/commit_message.rb",
+      "source_location": "L407",
+      "weight": 1.0,
+      "source": "git_commit_message_commitmessage",
+      "target": "git_commit_message_commitmessage_generate_subject",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "lib/kk/git/commit_message.rb",
+      "source_location": "L445",
+      "weight": 1.0,
+      "source": "git_commit_message_commitmessage",
+      "target": "git_commit_message_commitmessage_generate_body",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "lib/kk/git/commit_message.rb",
+      "source_location": "L470",
+      "weight": 1.0,
+      "source": "git_commit_message_commitmessage",
+      "target": "git_commit_message_commitmessage_append_group",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "lib/kk/git/commit_message.rb",
+      "source_location": "L483",
+      "weight": 1.0,
+      "source": "git_commit_message_commitmessage",
+      "target": "git_commit_message_commitmessage_detect_breaking_change",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "lib/kk/git/commit_message.rb",
+      "source_location": "L52",
+      "weight": 1.0,
+      "source": "git_commit_message_commitmessage_generate",
+      "target": "git_commit_message_commitmessage_collect_changes",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "lib/kk/git/commit_message.rb",
+      "source_location": "L55",
+      "weight": 1.0,
+      "source": "git_commit_message_commitmessage_generate",
+      "target": "git_commit_message_commitmessage_infer",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "lib/kk/git/commit_message.rb",
+      "source_location": "L66",
+      "weight": 1.0,
+      "source": "git_commit_message_commitmessage_generate",
+      "target": "git_commit_message_commitmessage_generate_body",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
+      "source_file": "lib/kk/git/rake_tasks.rb",
+      "source_location": "L42",
+      "weight": 1.0,
+      "source": "git_rake_tasks_install",
+      "target": "git_commit_message_commitmessage_generate"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
+      "source_file": "lib/kk/git/git_ops.rb",
+      "source_location": "L263",
+      "weight": 1.0,
+      "source": "git_git_ops_auto_commit_push",
+      "target": "git_commit_message_commitmessage_generate"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "lib/kk/git/commit_message.rb",
+      "source_location": "L86",
+      "weight": 1.0,
+      "source": "git_commit_message_commitmessage_generate_hash",
+      "target": "git_commit_message_commitmessage_collect_changes",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "lib/kk/git/commit_message.rb",
+      "source_location": "L89",
+      "weight": 1.0,
+      "source": "git_commit_message_commitmessage_generate_hash",
+      "target": "git_commit_message_commitmessage_infer",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "lib/kk/git/commit_message.rb",
+      "source_location": "L97",
+      "weight": 1.0,
+      "source": "git_commit_message_commitmessage_generate_hash",
+      "target": "git_commit_message_commitmessage_generate_body",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
+      "source_file": "lib/kk/git/commit_message.rb",
+      "source_location": "L109",
+      "weight": 1.0,
+      "source": "git_commit_message_commitmessage_generate_hash",
+      "target": "git_git_ops_status"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "lib/kk/git/commit_message.rb",
+      "source_location": "L124",
+      "weight": 1.0,
+      "source": "git_commit_message_commitmessage_collect_changes",
+      "target": "git_commit_message_commitmessage_parse_name_status_z",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "lib/kk/git/commit_message.rb",
+      "source_location": "L124",
+      "weight": 1.0,
+      "source": "git_commit_message_commitmessage_collect_changes",
+      "target": "git_commit_message_commitmessage_run_git",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "lib/kk/git/commit_message.rb",
+      "source_location": "L140",
+      "weight": 1.0,
+      "source": "git_commit_message_commitmessage_collect_changes",
+      "target": "git_commit_message_commitmessage_normalize_and_dedup",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "lib/kk/git/commit_message.rb",
+      "source_location": "L188",
+      "weight": 1.0,
+      "source": "git_commit_message_commitmessage_normalize_and_dedup",
+      "target": "git_commit_message_commitmessage_change_priority",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
+      "source_file": "lib/kk/git/commit_message.rb",
+      "source_location": "L203",
+      "weight": 1.0,
+      "source": "git_commit_message_commitmessage_change_priority",
+      "target": "git_git_ops_status"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "lib/kk/git/commit_message.rb",
+      "source_location": "L485",
+      "weight": 1.0,
+      "source": "git_commit_message_commitmessage_detect_breaking_change",
+      "target": "git_commit_message_commitmessage_run_git",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "lib/kk/git/commit_message.rb",
+      "source_location": "L229",
+      "weight": 1.0,
+      "source": "git_commit_message_commitmessage_infer",
+      "target": "git_commit_message_commitmessage_infer_scope",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "lib/kk/git/commit_message.rb",
+      "source_location": "L230",
+      "weight": 1.0,
+      "source": "git_commit_message_commitmessage_infer",
+      "target": "git_commit_message_commitmessage_infer_type",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "lib/kk/git/commit_message.rb",
+      "source_location": "L231",
+      "weight": 1.0,
+      "source": "git_commit_message_commitmessage_infer",
+      "target": "git_commit_message_commitmessage_generate_subject",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "lib/kk/git/commit_message.rb",
+      "source_location": "L232",
+      "weight": 1.0,
+      "source": "git_commit_message_commitmessage_infer",
+      "target": "git_commit_message_commitmessage_detect_breaking_change",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "lib/kk/git/commit_message.rb",
+      "source_location": "L310",
+      "weight": 1.0,
+      "source": "git_commit_message_commitmessage_infer_type",
+      "target": "git_commit_message_commitmessage_pick_main_type",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "lib/kk/git/commit_message.rb",
+      "source_location": "L254",
+      "weight": 1.0,
+      "source": "git_commit_message_commitmessage_infer_scope",
+      "target": "git_commit_message_commitmessage_tooling_path",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "lib/kk/git/commit_message.rb",
+      "source_location": "L254",
+      "weight": 1.0,
+      "source": "git_commit_message_commitmessage_infer_scope",
+      "target": "git_commit_message_commitmessage_doc_path",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "lib/kk/git/commit_message.rb",
+      "source_location": "L254",
+      "weight": 1.0,
+      "source": "git_commit_message_commitmessage_infer_scope",
+      "target": "git_commit_message_commitmessage_ci_path",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "lib/kk/git/commit_message.rb",
+      "source_location": "L258",
+      "weight": 1.0,
+      "source": "git_commit_message_commitmessage_infer_scope",
+      "target": "git_commit_message_commitmessage_top_level_scope",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "lib/kk/git/commit_message.rb",
+      "source_location": "L281",
+      "weight": 1.0,
+      "source": "git_commit_message_commitmessage_infer_type",
+      "target": "git_commit_message_commitmessage_doc_path",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "lib/kk/git/commit_message.rb",
+      "source_location": "L284",
+      "weight": 1.0,
+      "source": "git_commit_message_commitmessage_infer_type",
+      "target": "git_commit_message_commitmessage_ci_path",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "lib/kk/git/commit_message.rb",
+      "source_location": "L287",
+      "weight": 1.0,
+      "source": "git_commit_message_commitmessage_infer_type",
+      "target": "git_commit_message_commitmessage_test_path",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "lib/kk/git/commit_message.rb",
+      "source_location": "L290",
+      "weight": 1.0,
+      "source": "git_commit_message_commitmessage_infer_type",
+      "target": "git_commit_message_commitmessage_deps_path",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "lib/kk/git/commit_message.rb",
+      "source_location": "L294",
+      "weight": 1.0,
+      "source": "git_commit_message_commitmessage_infer_type",
+      "target": "git_commit_message_commitmessage_tooling_path",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "lib/kk/git/commit_message.rb",
+      "source_location": "L299",
+      "weight": 1.0,
+      "source": "git_commit_message_commitmessage_infer_type",
+      "target": "git_commit_message_commitmessage_code_path",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "lib/kk/git/commit_message.rb",
+      "source_location": "L309",
+      "weight": 1.0,
+      "source": "git_commit_message_commitmessage_infer_type",
+      "target": "git_commit_message_commitmessage_type_by_path",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
+      "source_file": "lib/kk/git/commit_message.rb",
+      "source_location": "L300",
+      "weight": 1.0,
+      "source": "git_commit_message_commitmessage_infer_type",
+      "target": "git_git_ops_status"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "lib/kk/git/commit_message.rb",
+      "source_location": "L314",
+      "weight": 1.0,
+      "source": "git_commit_message_commitmessage_type_by_path",
+      "target": "git_commit_message_commitmessage_doc_path",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "lib/kk/git/commit_message.rb",
+      "source_location": "L315",
+      "weight": 1.0,
+      "source": "git_commit_message_commitmessage_type_by_path",
+      "target": "git_commit_message_commitmessage_ci_path",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "lib/kk/git/commit_message.rb",
+      "source_location": "L316",
+      "weight": 1.0,
+      "source": "git_commit_message_commitmessage_type_by_path",
+      "target": "git_commit_message_commitmessage_test_path",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "lib/kk/git/commit_message.rb",
+      "source_location": "L317",
+      "weight": 1.0,
+      "source": "git_commit_message_commitmessage_type_by_path",
+      "target": "git_commit_message_commitmessage_deps_path",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "lib/kk/git/commit_message.rb",
+      "source_location": "L318",
+      "weight": 1.0,
+      "source": "git_commit_message_commitmessage_type_by_path",
+      "target": "git_commit_message_commitmessage_build_path",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "lib/kk/git/commit_message.rb",
+      "source_location": "L319",
+      "weight": 1.0,
+      "source": "git_commit_message_commitmessage_type_by_path",
+      "target": "git_commit_message_commitmessage_config_path",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "lib/kk/git/commit_message.rb",
+      "source_location": "L320",
+      "weight": 1.0,
+      "source": "git_commit_message_commitmessage_type_by_path",
+      "target": "git_commit_message_commitmessage_script_path",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "lib/kk/git/commit_message.rb",
+      "source_location": "L322",
+      "weight": 1.0,
+      "source": "git_commit_message_commitmessage_type_by_path",
+      "target": "git_commit_message_commitmessage_code_path",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "lib/kk/git/commit_message.rb",
+      "source_location": "L398",
+      "weight": 1.0,
+      "source": "git_commit_message_commitmessage_tooling_path",
+      "target": "git_commit_message_commitmessage_deps_path",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "lib/kk/git/commit_message.rb",
+      "source_location": "L393",
+      "weight": 1.0,
+      "source": "git_commit_message_commitmessage_tooling_path",
+      "target": "git_commit_message_commitmessage_build_path",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "lib/kk/git/commit_message.rb",
+      "source_location": "L399",
+      "weight": 1.0,
+      "source": "git_commit_message_commitmessage_tooling_path",
+      "target": "git_commit_message_commitmessage_config_path",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "lib/kk/git/commit_message.rb",
+      "source_location": "L394",
+      "weight": 1.0,
+      "source": "git_commit_message_commitmessage_tooling_path",
+      "target": "git_commit_message_commitmessage_script_path",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
+      "source_file": "lib/kk/git/commit_message.rb",
+      "source_location": "L411",
+      "weight": 1.0,
+      "source": "git_commit_message_commitmessage_generate_subject",
+      "target": "git_git_ops_status"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "lib/kk/git/commit_message.rb",
+      "source_location": "L461",
+      "weight": 1.0,
+      "source": "git_commit_message_commitmessage_generate_body",
+      "target": "git_commit_message_commitmessage_append_group",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
+      "source_file": "lib/kk/git/commit_message.rb",
+      "source_location": "L456",
+      "weight": 1.0,
+      "source": "git_commit_message_commitmessage_generate_body",
+      "target": "git_git_ops_status"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
+      "source_file": "lib/kk/git/commit_message.rb",
+      "source_location": "L475",
+      "weight": 1.0,
+      "source": "git_commit_message_commitmessage_append_group",
+      "target": "git_git_ops_status"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "lib/kk/git/rake_tasks.rb",
+      "source_location": "L13",
+      "weight": 1.0,
+      "source": "lib_kk_git_rake_tasks_rb",
+      "target": "git_rake_tasks_install",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
+      "source_file": "lib/kk/git/rake_tasks.rb",
+      "source_location": "L19",
+      "weight": 1.0,
+      "source": "git_rake_tasks_install",
+      "target": "git_git_ops_status"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
+      "source_file": "lib/kk/git/rake_tasks.rb",
+      "source_location": "L20",
+      "weight": 1.0,
+      "source": "git_rake_tasks_install",
+      "target": "git_git_ops_branch"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
+      "source_file": "lib/kk/git/rake_tasks.rb",
+      "source_location": "L20",
+      "weight": 1.0,
+      "source": "git_rake_tasks_install",
+      "target": "git_git_ops_remote"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
+      "source_file": "lib/kk/git/rake_tasks.rb",
+      "source_location": "L33",
+      "weight": 1.0,
+      "source": "git_rake_tasks_install",
+      "target": "git_git_ops_needs_sync"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
+      "source_file": "lib/kk/git/rake_tasks.rb",
+      "source_location": "L34",
+      "weight": 1.0,
+      "source": "git_rake_tasks_install",
+      "target": "git_git_ops_sync_with_remote"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
+      "source_file": "lib/kk/git/rake_tasks.rb",
+      "source_location": "L69",
+      "weight": 1.0,
+      "source": "git_rake_tasks_install",
+      "target": "git_git_ops_auto_commit_push"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "lib/kk/git/git_ops.rb",
+      "source_location": "L9",
+      "weight": 1.0,
+      "source": "lib_kk_git_git_ops_rb",
+      "target": "git_git_ops_error",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "lib/kk/git/git_ops.rb",
+      "source_location": "L18",
+      "weight": 1.0,
+      "source": "lib_kk_git_git_ops_rb",
+      "target": "git_git_ops_needs_sync",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "lib/kk/git/git_ops.rb",
+      "source_location": "L22",
+      "weight": 1.0,
+      "source": "lib_kk_git_git_ops_rb",
+      "target": "git_git_ops_unpushed",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "lib/kk/git/git_ops.rb",
+      "source_location": "L26",
+      "weight": 1.0,
+      "source": "lib_kk_git_git_ops_rb",
+      "target": "git_git_ops_behind_remote",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "lib/kk/git/git_ops.rb",
+      "source_location": "L33",
+      "weight": 1.0,
+      "source": "lib_kk_git_git_ops_rb",
+      "target": "git_git_ops_dry_run",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "lib/kk/git/git_ops.rb",
+      "source_location": "L37",
+      "weight": 1.0,
+      "source": "lib_kk_git_git_ops_rb",
+      "target": "git_git_ops_skip_pull",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "lib/kk/git/git_ops.rb",
+      "source_location": "L41",
+      "weight": 1.0,
+      "source": "lib_kk_git_git_ops_rb",
+      "target": "git_git_ops_skip_push",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "lib/kk/git/git_ops.rb",
+      "source_location": "L45",
+      "weight": 1.0,
+      "source": "lib_kk_git_git_ops_rb",
+      "target": "git_git_ops_amend",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "lib/kk/git/git_ops.rb",
+      "source_location": "L49",
+      "weight": 1.0,
+      "source": "lib_kk_git_git_ops_rb",
+      "target": "git_git_ops_remote",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "lib/kk/git/git_ops.rb",
+      "source_location": "L54",
+      "weight": 1.0,
+      "source": "lib_kk_git_git_ops_rb",
+      "target": "git_git_ops_branch",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "lib/kk/git/git_ops.rb",
+      "source_location": "L59",
+      "weight": 1.0,
+      "source": "lib_kk_git_git_ops_rb",
+      "target": "git_git_ops_add_paths",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "lib/kk/git/git_ops.rb",
+      "source_location": "L66",
+      "weight": 1.0,
+      "source": "lib_kk_git_git_ops_rb",
+      "target": "git_git_ops_run_cmd",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "lib/kk/git/git_ops.rb",
+      "source_location": "L82",
+      "weight": 1.0,
+      "source": "lib_kk_git_git_ops_rb",
+      "target": "git_git_ops_mutating_git_command",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "lib/kk/git/git_ops.rb",
+      "source_location": "L86",
+      "weight": 1.0,
+      "source": "lib_kk_git_git_ops_rb",
+      "target": "git_git_ops_ensure_ok",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "lib/kk/git/git_ops.rb",
+      "source_location": "L95",
+      "weight": 1.0,
+      "source": "lib_kk_git_git_ops_rb",
+      "target": "git_git_ops_in_git_repo",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "lib/kk/git/git_ops.rb",
+      "source_location": "L100",
+      "weight": 1.0,
+      "source": "lib_kk_git_git_ops_rb",
+      "target": "git_git_ops_ensure_in_repo",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "lib/kk/git/git_ops.rb",
+      "source_location": "L104",
+      "weight": 1.0,
+      "source": "lib_kk_git_git_ops_rb",
+      "target": "git_git_ops_current_branch",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "lib/kk/git/git_ops.rb",
+      "source_location": "L110",
+      "weight": 1.0,
+      "source": "lib_kk_git_git_ops_rb",
+      "target": "git_git_ops_detached_head",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "lib/kk/git/git_ops.rb",
+      "source_location": "L114",
+      "weight": 1.0,
+      "source": "lib_kk_git_git_ops_rb",
+      "target": "git_git_ops_ensure_not_detached",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "lib/kk/git/git_ops.rb",
+      "source_location": "L118",
+      "weight": 1.0,
+      "source": "lib_kk_git_git_ops_rb",
+      "target": "git_git_ops_working_tree_clean",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "lib/kk/git/git_ops.rb",
+      "source_location": "L124",
+      "weight": 1.0,
+      "source": "lib_kk_git_git_ops_rb",
+      "target": "git_git_ops_upstream_configured",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "lib/kk/git/git_ops.rb",
+      "source_location": "L130",
+      "weight": 1.0,
+      "source": "lib_kk_git_git_ops_rb",
+      "target": "git_git_ops_ahead_count",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "lib/kk/git/git_ops.rb",
+      "source_location": "L141",
+      "weight": 1.0,
+      "source": "lib_kk_git_git_ops_rb",
+      "target": "git_git_ops_behind_count",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "lib/kk/git/git_ops.rb",
+      "source_location": "L151",
+      "weight": 1.0,
+      "source": "lib_kk_git_git_ops_rb",
+      "target": "git_git_ops_unpushed_commits",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "lib/kk/git/git_ops.rb",
+      "source_location": "L156",
+      "weight": 1.0,
+      "source": "lib_kk_git_git_ops_rb",
+      "target": "git_git_ops_status",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "lib/kk/git/git_ops.rb",
+      "source_location": "L172",
+      "weight": 1.0,
+      "source": "lib_kk_git_git_ops_rb",
+      "target": "git_git_ops_status_hash",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "lib/kk/git/git_ops.rb",
+      "source_location": "L186",
+      "weight": 1.0,
+      "source": "lib_kk_git_git_ops_rb",
+      "target": "git_git_ops_pull_remote",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "lib/kk/git/git_ops.rb",
+      "source_location": "L194",
+      "weight": 1.0,
+      "source": "lib_kk_git_git_ops_rb",
+      "target": "git_git_ops_push_remote",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "lib/kk/git/git_ops.rb",
+      "source_location": "L207",
+      "weight": 1.0,
+      "source": "lib_kk_git_git_ops_rb",
+      "target": "git_git_ops_sync_with_remote",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "lib/kk/git/git_ops.rb",
+      "source_location": "L213",
+      "weight": 1.0,
+      "source": "lib_kk_git_git_ops_rb",
+      "target": "git_git_ops_add_all",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "lib/kk/git/git_ops.rb",
+      "source_location": "L220",
+      "weight": 1.0,
+      "source": "lib_kk_git_git_ops_rb",
+      "target": "git_git_ops_commit_with_message",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "lib/kk/git/git_ops.rb",
+      "source_location": "L242",
+      "weight": 1.0,
+      "source": "lib_kk_git_git_ops_rb",
+      "target": "git_git_ops_auto_commit_push",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "lib/kk/git/git_ops.rb",
+      "source_location": "L182",
+      "weight": 1.0,
+      "source": "git_git_ops_status_hash",
+      "target": "git_git_ops_needs_sync",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "lib/kk/git/git_ops.rb",
+      "source_location": "L248",
+      "weight": 1.0,
+      "source": "git_git_ops_auto_commit_push",
+      "target": "git_git_ops_needs_sync",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "lib/kk/git/git_ops.rb",
+      "source_location": "L67",
+      "weight": 1.0,
+      "source": "git_git_ops_run_cmd",
+      "target": "git_git_ops_dry_run",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "lib/kk/git/git_ops.rb",
+      "source_location": "L197",
+      "weight": 1.0,
+      "source": "git_git_ops_push_remote",
+      "target": "git_git_ops_dry_run",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "lib/kk/git/git_ops.rb",
+      "source_location": "L210",
+      "weight": 1.0,
+      "source": "git_git_ops_sync_with_remote",
+      "target": "git_git_ops_dry_run",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "lib/kk/git/git_ops.rb",
+      "source_location": "L187",
+      "weight": 1.0,
+      "source": "git_git_ops_pull_remote",
+      "target": "git_git_ops_skip_pull",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "lib/kk/git/git_ops.rb",
+      "source_location": "L195",
+      "weight": 1.0,
+      "source": "git_git_ops_push_remote",
+      "target": "git_git_ops_skip_push",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "lib/kk/git/git_ops.rb",
+      "source_location": "L221",
+      "weight": 1.0,
+      "source": "git_git_ops_commit_with_message",
+      "target": "git_git_ops_amend",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "lib/kk/git/git_ops.rb",
+      "source_location": "L158",
+      "weight": 1.0,
+      "source": "git_git_ops_status",
+      "target": "git_git_ops_remote",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "lib/kk/git/git_ops.rb",
+      "source_location": "L176",
+      "weight": 1.0,
+      "source": "git_git_ops_status_hash",
+      "target": "git_git_ops_remote",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "lib/kk/git/git_ops.rb",
+      "source_location": "L159",
+      "weight": 1.0,
+      "source": "git_git_ops_status",
+      "target": "git_git_ops_branch",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "lib/kk/git/git_ops.rb",
+      "source_location": "L175",
+      "weight": 1.0,
+      "source": "git_git_ops_status_hash",
+      "target": "git_git_ops_branch",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "lib/kk/git/git_ops.rb",
+      "source_location": "L67",
+      "weight": 1.0,
+      "source": "git_git_ops_run_cmd",
+      "target": "git_git_ops_mutating_git_command",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "lib/kk/git/git_ops.rb",
+      "source_location": "L96",
+      "weight": 1.0,
+      "source": "git_git_ops_in_git_repo",
+      "target": "git_git_ops_run_cmd",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "lib/kk/git/git_ops.rb",
+      "source_location": "L105",
+      "weight": 1.0,
+      "source": "git_git_ops_current_branch",
+      "target": "git_git_ops_run_cmd",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "lib/kk/git/git_ops.rb",
+      "source_location": "L119",
+      "weight": 1.0,
+      "source": "git_git_ops_working_tree_clean",
+      "target": "git_git_ops_run_cmd",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "lib/kk/git/git_ops.rb",
+      "source_location": "L125",
+      "weight": 1.0,
+      "source": "git_git_ops_upstream_configured",
+      "target": "git_git_ops_run_cmd",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "lib/kk/git/git_ops.rb",
+      "source_location": "L131",
+      "weight": 1.0,
+      "source": "git_git_ops_ahead_count",
+      "target": "git_git_ops_run_cmd",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "lib/kk/git/git_ops.rb",
+      "source_location": "L142",
+      "weight": 1.0,
+      "source": "git_git_ops_behind_count",
+      "target": "git_git_ops_run_cmd",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "lib/kk/git/git_ops.rb",
+      "source_location": "L190",
+      "weight": 1.0,
+      "source": "git_git_ops_pull_remote",
+      "target": "git_git_ops_run_cmd",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "lib/kk/git/git_ops.rb",
+      "source_location": "L200",
+      "weight": 1.0,
+      "source": "git_git_ops_push_remote",
+      "target": "git_git_ops_run_cmd",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "lib/kk/git/git_ops.rb",
+      "source_location": "L215",
+      "weight": 1.0,
+      "source": "git_git_ops_add_all",
+      "target": "git_git_ops_run_cmd",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "lib/kk/git/git_ops.rb",
+      "source_location": "L226",
+      "weight": 1.0,
+      "source": "git_git_ops_commit_with_message",
+      "target": "git_git_ops_run_cmd",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "lib/kk/git/git_ops.rb",
+      "source_location": "L106",
+      "weight": 1.0,
+      "source": "git_git_ops_current_branch",
+      "target": "git_git_ops_ensure_ok",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "lib/kk/git/git_ops.rb",
+      "source_location": "L120",
+      "weight": 1.0,
+      "source": "git_git_ops_working_tree_clean",
+      "target": "git_git_ops_ensure_ok",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "lib/kk/git/git_ops.rb",
+      "source_location": "L191",
+      "weight": 1.0,
+      "source": "git_git_ops_pull_remote",
+      "target": "git_git_ops_ensure_ok",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "lib/kk/git/git_ops.rb",
+      "source_location": "L204",
+      "weight": 1.0,
+      "source": "git_git_ops_push_remote",
+      "target": "git_git_ops_ensure_ok",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "lib/kk/git/git_ops.rb",
+      "source_location": "L216",
+      "weight": 1.0,
+      "source": "git_git_ops_add_all",
+      "target": "git_git_ops_ensure_ok",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "lib/kk/git/git_ops.rb",
+      "source_location": "L233",
+      "weight": 1.0,
+      "source": "git_git_ops_commit_with_message",
+      "target": "git_git_ops_ensure_ok",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "lib/kk/git/git_ops.rb",
+      "source_location": "L101",
+      "weight": 1.0,
+      "source": "git_git_ops_ensure_in_repo",
+      "target": "git_git_ops_in_git_repo",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "lib/kk/git/git_ops.rb",
+      "source_location": "L157",
+      "weight": 1.0,
+      "source": "git_git_ops_status",
+      "target": "git_git_ops_ensure_in_repo",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "lib/kk/git/git_ops.rb",
+      "source_location": "L243",
+      "weight": 1.0,
+      "source": "git_git_ops_auto_commit_push",
+      "target": "git_git_ops_ensure_in_repo",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "lib/kk/git/git_ops.rb",
+      "source_location": "L115",
+      "weight": 1.0,
+      "source": "git_git_ops_ensure_not_detached",
+      "target": "git_git_ops_detached_head",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "lib/kk/git/git_ops.rb",
+      "source_location": "L168",
+      "weight": 1.0,
+      "source": "git_git_ops_status",
+      "target": "git_git_ops_detached_head",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "lib/kk/git/git_ops.rb",
+      "source_location": "L197",
+      "weight": 1.0,
+      "source": "git_git_ops_push_remote",
+      "target": "git_git_ops_ensure_not_detached",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "lib/kk/git/git_ops.rb",
+      "source_location": "L164",
+      "weight": 1.0,
+      "source": "git_git_ops_status",
+      "target": "git_git_ops_working_tree_clean",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "lib/kk/git/git_ops.rb",
+      "source_location": "L247",
+      "weight": 1.0,
+      "source": "git_git_ops_auto_commit_push",
+      "target": "git_git_ops_working_tree_clean",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "lib/kk/git/git_ops.rb",
+      "source_location": "L167",
+      "weight": 1.0,
+      "source": "git_git_ops_status",
+      "target": "git_git_ops_upstream_configured",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "lib/kk/git/git_ops.rb",
+      "source_location": "L199",
+      "weight": 1.0,
+      "source": "git_git_ops_push_remote",
+      "target": "git_git_ops_upstream_configured",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "lib/kk/git/git_ops.rb",
+      "source_location": "L152",
+      "weight": 1.0,
+      "source": "git_git_ops_unpushed_commits",
+      "target": "git_git_ops_ahead_count",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "lib/kk/git/git_ops.rb",
+      "source_location": "L165",
+      "weight": 1.0,
+      "source": "git_git_ops_status",
+      "target": "git_git_ops_ahead_count",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "lib/kk/git/git_ops.rb",
+      "source_location": "L166",
+      "weight": 1.0,
+      "source": "git_git_ops_status",
+      "target": "git_git_ops_behind_count",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "lib/kk/git/git_ops.rb",
+      "source_location": "L269",
+      "weight": 1.0,
+      "source": "git_git_ops_auto_commit_push",
+      "target": "git_git_ops_unpushed_commits",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "lib/kk/git/git_ops.rb",
+      "source_location": "L173",
+      "weight": 1.0,
+      "source": "git_git_ops_status_hash",
+      "target": "git_git_ops_status",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "lib/kk/git/git_ops.rb",
+      "source_location": "L248",
+      "weight": 1.0,
+      "source": "git_git_ops_auto_commit_push",
+      "target": "git_git_ops_status",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "lib/kk/git/git_ops.rb",
+      "source_location": "L208",
+      "weight": 1.0,
+      "source": "git_git_ops_sync_with_remote",
+      "target": "git_git_ops_pull_remote",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "lib/kk/git/git_ops.rb",
+      "source_location": "L209",
+      "weight": 1.0,
+      "source": "git_git_ops_sync_with_remote",
+      "target": "git_git_ops_push_remote",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "lib/kk/git/git_ops.rb",
+      "source_location": "L249",
+      "weight": 1.0,
+      "source": "git_git_ops_auto_commit_push",
+      "target": "git_git_ops_sync_with_remote",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "lib/kk/git/git_ops.rb",
+      "source_location": "L257",
+      "weight": 1.0,
+      "source": "git_git_ops_auto_commit_push",
+      "target": "git_git_ops_add_all",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "lib/kk/git/git_ops.rb",
+      "source_location": "L268",
+      "weight": 1.0,
+      "source": "git_git_ops_auto_commit_push",
+      "target": "git_git_ops_commit_with_message",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "README.md",
+      "source_location": "L1",
+      "weight": 1.0,
+      "source": "readme_md",
+      "target": "kk_git_readme_kk_git",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "README.md",
+      "source_location": "L8",
+      "weight": 1.0,
+      "source": "kk_git_readme_kk_git",
+      "target": "kk_git_readme_install_rubygems",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "README.md",
+      "source_location": "L31",
+      "weight": 1.0,
+      "source": "kk_git_readme_kk_git",
+      "target": "kk_git_readme_cli",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "README.md",
+      "source_location": "L63",
+      "weight": 1.0,
+      "source": "kk_git_readme_kk_git",
+      "target": "kk_git_readme_rake",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "README.md",
+      "source_location": "L88",
+      "weight": 1.0,
+      "source": "kk_git_readme_kk_git",
+      "target": "kk_git_readme_git_auto_commit_push_kk_git_push_behavior",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "README.md",
+      "source_location": "L100",
+      "weight": 1.0,
+      "source": "kk_git_readme_kk_git",
+      "target": "kk_git_readme_environment_variables",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "README.md",
+      "source_location": "L125",
+      "weight": 1.0,
+      "source": "kk_git_readme_kk_git",
+      "target": "kk_git_readme_programmatic_api",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "README.md",
+      "source_location": "L142",
+      "weight": 1.0,
+      "source": "kk_git_readme_kk_git",
+      "target": "kk_git_readme_safety_notes",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "README.md",
+      "source_location": "L150",
+      "weight": 1.0,
+      "source": "kk_git_readme_kk_git",
+      "target": "kk_git_readme_test",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "README.md",
+      "source_location": "L156",
+      "weight": 1.0,
+      "source": "kk_git_readme_kk_git",
+      "target": "kk_git_readme_release_to_rubygems_github_actions",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "README.md",
+      "source_location": "L10",
+      "weight": 1.0,
+      "source": "kk_git_readme_install_rubygems",
+      "target": "kk_git_readme_option_1_global_install_recommended",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "README.md",
+      "source_location": "L18",
+      "weight": 1.0,
+      "source": "kk_git_readme_install_rubygems",
+      "target": "kk_git_readme_check_installed_version",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "README.md",
+      "source_location": "L24",
+      "weight": 1.0,
+      "source": "kk_git_readme_install_rubygems",
+      "target": "kk_git_readme_option_2_add_to_your_project",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "README.md",
+      "source_location": "L12",
+      "weight": 1.0,
+      "source": "kk_git_readme_option_1_global_install_recommended",
+      "target": "kk_git_readme_codeblock_1",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "README.md",
+      "source_location": "L20",
+      "weight": 1.0,
+      "source": "kk_git_readme_check_installed_version",
+      "target": "kk_git_readme_codeblock_2",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "README.md",
+      "source_location": "L26",
+      "weight": 1.0,
+      "source": "kk_git_readme_option_2_add_to_your_project",
+      "target": "kk_git_readme_codeblock_3",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "README.md",
+      "source_location": "L33",
+      "weight": 1.0,
+      "source": "kk_git_readme_cli",
+      "target": "kk_git_readme_codeblock_4",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "README.md",
+      "source_location": "L45",
+      "weight": 1.0,
+      "source": "kk_git_readme_cli",
+      "target": "kk_git_readme_codeblock_5",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "README.md",
+      "source_location": "L53",
+      "weight": 1.0,
+      "source": "kk_git_readme_cli",
+      "target": "kk_git_readme_codeblock_6",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "README.md",
+      "source_location": "L59",
+      "weight": 1.0,
+      "source": "kk_git_readme_cli",
+      "target": "kk_git_readme_codeblock_7",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "README.md",
+      "source_location": "L67",
+      "weight": 1.0,
+      "source": "kk_git_readme_rake",
+      "target": "kk_git_readme_codeblock_8",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "README.md",
+      "source_location": "L79",
+      "weight": 1.0,
+      "source": "kk_git_readme_rake",
+      "target": "kk_git_readme_codeblock_9",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "README.md",
+      "source_location": "L102",
+      "weight": 1.0,
+      "source": "kk_git_readme_environment_variables",
+      "target": "kk_git_readme_remote_sync",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "README.md",
+      "source_location": "L115",
+      "weight": 1.0,
+      "source": "kk_git_readme_environment_variables",
+      "target": "kk_git_readme_commit_message_overrides",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "README.md",
+      "source_location": "L127",
+      "weight": 1.0,
+      "source": "kk_git_readme_programmatic_api",
+      "target": "kk_git_readme_codeblock_10",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "README.md",
+      "source_location": "L152",
+      "weight": 1.0,
+      "source": "kk_git_readme_test",
+      "target": "kk_git_readme_codeblock_11",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "README.md",
+      "source_location": "L160",
+      "weight": 1.0,
+      "source": "kk_git_readme_release_to_rubygems_github_actions",
+      "target": "kk_git_readme_1_configure_secret",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "README.md",
+      "source_location": "L166",
+      "weight": 1.0,
+      "source": "kk_git_readme_release_to_rubygems_github_actions",
+      "target": "kk_git_readme_2_create_a_tag_to_release",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "README.md",
+      "source_location": "L168",
+      "weight": 1.0,
+      "source": "kk_git_readme_2_create_a_tag_to_release",
+      "target": "kk_git_readme_codeblock_12",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "r.md",
+      "source_location": "L1",
+      "weight": 1.0,
+      "source": "r_md",
+      "target": "kk_git_r_goal",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "r.md",
+      "source_location": "L5",
+      "weight": 1.0,
+      "source": "r_md",
+      "target": "kk_git_r_implementation",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "r.md",
+      "source_location": "L15",
+      "weight": 1.0,
+      "source": "r_md",
+      "target": "kk_git_r_examples",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "r.md",
+      "source_location": "L17",
+      "weight": 1.0,
+      "source": "kk_git_r_examples",
+      "target": "kk_git_r_codeblock_1",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "AGENTS.md",
+      "source_location": "L2",
+      "weight": 1.0,
+      "source": "agents_md",
+      "target": "kk_git_agents_openspec_instructions",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "openspec/project.md",
+      "source_location": "L1",
+      "weight": 1.0,
+      "source": "openspec_project_md",
+      "target": "openspec_project_project_context",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "openspec/project.md",
+      "source_location": "L3",
+      "weight": 1.0,
+      "source": "openspec_project_project_context",
+      "target": "openspec_project_purpose",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "openspec/project.md",
+      "source_location": "L6",
+      "weight": 1.0,
+      "source": "openspec_project_project_context",
+      "target": "openspec_project_tech_stack",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "openspec/project.md",
+      "source_location": "L10",
+      "weight": 1.0,
+      "source": "openspec_project_project_context",
+      "target": "openspec_project_project_conventions",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "openspec/project.md",
+      "source_location": "L24",
+      "weight": 1.0,
+      "source": "openspec_project_project_context",
+      "target": "openspec_project_domain_context",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "openspec/project.md",
+      "source_location": "L27",
+      "weight": 1.0,
+      "source": "openspec_project_project_context",
+      "target": "openspec_project_important_constraints",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "openspec/project.md",
+      "source_location": "L30",
+      "weight": 1.0,
+      "source": "openspec_project_project_context",
+      "target": "openspec_project_external_dependencies",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "openspec/project.md",
+      "source_location": "L12",
+      "weight": 1.0,
+      "source": "openspec_project_project_conventions",
+      "target": "openspec_project_code_style",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "openspec/project.md",
+      "source_location": "L15",
+      "weight": 1.0,
+      "source": "openspec_project_project_conventions",
+      "target": "openspec_project_architecture_patterns",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "openspec/project.md",
+      "source_location": "L18",
+      "weight": 1.0,
+      "source": "openspec_project_project_conventions",
+      "target": "openspec_project_testing_strategy",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "openspec/project.md",
+      "source_location": "L21",
+      "weight": 1.0,
+      "source": "openspec_project_project_conventions",
+      "target": "openspec_project_git_workflow",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "openspec/AGENTS.md",
+      "source_location": "L1",
+      "weight": 1.0,
+      "source": "openspec_agents_md",
+      "target": "openspec_agents_openspec_instructions",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "openspec/AGENTS.md",
+      "source_location": "L5",
+      "weight": 1.0,
+      "source": "openspec_agents_openspec_instructions",
+      "target": "openspec_agents_tl_dr_quick_checklist",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "openspec/AGENTS.md",
+      "source_location": "L15",
+      "weight": 1.0,
+      "source": "openspec_agents_openspec_instructions",
+      "target": "openspec_agents_three_stage_workflow",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "openspec/AGENTS.md",
+      "source_location": "L66",
+      "weight": 1.0,
+      "source": "openspec_agents_openspec_instructions",
+      "target": "openspec_agents_before_any_task",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "openspec/AGENTS.md",
+      "source_location": "L89",
+      "weight": 1.0,
+      "source": "openspec_agents_openspec_instructions",
+      "target": "openspec_agents_quick_start",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "openspec/AGENTS.md",
+      "source_location": "L123",
+      "weight": 1.0,
+      "source": "openspec_agents_openspec_instructions",
+      "target": "openspec_agents_directory_structure",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "openspec/AGENTS.md",
+      "source_location": "L143",
+      "weight": 1.0,
+      "source": "openspec_agents_openspec_instructions",
+      "target": "openspec_agents_creating_change_proposals",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "openspec/AGENTS.md",
+      "source_location": "L237",
+      "weight": 1.0,
+      "source": "openspec_agents_openspec_instructions",
+      "target": "openspec_agents_spec_file_format",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "openspec/AGENTS.md",
+      "source_location": "L289",
+      "weight": 1.0,
+      "source": "openspec_agents_openspec_instructions",
+      "target": "openspec_agents_troubleshooting",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "openspec/AGENTS.md",
+      "source_location": "L318",
+      "weight": 1.0,
+      "source": "openspec_agents_openspec_instructions",
+      "target": "openspec_agents_happy_path_script",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "openspec/AGENTS.md",
+      "source_location": "L349",
+      "weight": 1.0,
+      "source": "openspec_agents_openspec_instructions",
+      "target": "openspec_agents_multi_capability_example",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "openspec/AGENTS.md",
+      "source_location": "L376",
+      "weight": 1.0,
+      "source": "openspec_agents_openspec_instructions",
+      "target": "openspec_agents_best_practices",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "openspec/AGENTS.md",
+      "source_location": "L406",
+      "weight": 1.0,
+      "source": "openspec_agents_openspec_instructions",
+      "target": "openspec_agents_tool_selection_guide",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "openspec/AGENTS.md",
+      "source_location": "L415",
+      "weight": 1.0,
+      "source": "openspec_agents_openspec_instructions",
+      "target": "openspec_agents_error_recovery",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "openspec/AGENTS.md",
+      "source_location": "L435",
+      "weight": 1.0,
+      "source": "openspec_agents_openspec_instructions",
+      "target": "openspec_agents_quick_reference",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "openspec/AGENTS.md",
+      "source_location": "L17",
+      "weight": 1.0,
+      "source": "openspec_agents_three_stage_workflow",
+      "target": "openspec_agents_stage_1_creating_changes",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "openspec/AGENTS.md",
+      "source_location": "L49",
+      "weight": 1.0,
+      "source": "openspec_agents_three_stage_workflow",
+      "target": "openspec_agents_stage_2_implementing_changes",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "openspec/AGENTS.md",
+      "source_location": "L59",
+      "weight": 1.0,
+      "source": "openspec_agents_three_stage_workflow",
+      "target": "openspec_agents_stage_3_archiving_changes",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "openspec/AGENTS.md",
+      "source_location": "L81",
+      "weight": 1.0,
+      "source": "openspec_agents_before_any_task",
+      "target": "openspec_agents_search_guidance",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "openspec/AGENTS.md",
+      "source_location": "L91",
+      "weight": 1.0,
+      "source": "openspec_agents_quick_start",
+      "target": "openspec_agents_cli_commands",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "openspec/AGENTS.md",
+      "source_location": "L114",
+      "weight": 1.0,
+      "source": "openspec_agents_quick_start",
+      "target": "openspec_agents_command_flags",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "openspec/AGENTS.md",
+      "source_location": "L93",
+      "weight": 1.0,
+      "source": "openspec_agents_cli_commands",
+      "target": "openspec_agents_codeblock_1",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "openspec/AGENTS.md",
+      "source_location": "L125",
+      "weight": 1.0,
+      "source": "openspec_agents_directory_structure",
+      "target": "openspec_agents_codeblock_2",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "openspec/AGENTS.md",
+      "source_location": "L145",
+      "weight": 1.0,
+      "source": "openspec_agents_creating_change_proposals",
+      "target": "openspec_agents_decision_tree",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "openspec/AGENTS.md",
+      "source_location": "L157",
+      "weight": 1.0,
+      "source": "openspec_agents_creating_change_proposals",
+      "target": "openspec_agents_proposal_structure",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "openspec/AGENTS.md",
+      "source_location": "L147",
+      "weight": 1.0,
+      "source": "openspec_agents_decision_tree",
+      "target": "openspec_agents_codeblock_3",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "openspec/AGENTS.md",
+      "source_location": "L162",
+      "weight": 1.0,
+      "source": "openspec_agents_proposal_structure",
+      "target": "openspec_agents_codeblock_4",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "openspec/AGENTS.md",
+      "source_location": "L178",
+      "weight": 1.0,
+      "source": "openspec_agents_proposal_structure",
+      "target": "openspec_agents_codeblock_5",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "openspec/AGENTS.md",
+      "source_location": "L199",
+      "weight": 1.0,
+      "source": "openspec_agents_proposal_structure",
+      "target": "openspec_agents_codeblock_6",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "openspec/AGENTS.md",
+      "source_location": "L215",
+      "weight": 1.0,
+      "source": "openspec_agents_proposal_structure",
+      "target": "openspec_agents_codeblock_7",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "openspec/AGENTS.md",
+      "source_location": "L239",
+      "weight": 1.0,
+      "source": "openspec_agents_spec_file_format",
+      "target": "openspec_agents_critical_scenario_formatting",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "openspec/AGENTS.md",
+      "source_location": "L257",
+      "weight": 1.0,
+      "source": "openspec_agents_spec_file_format",
+      "target": "openspec_agents_requirement_wording",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "openspec/AGENTS.md",
+      "source_location": "L260",
+      "weight": 1.0,
+      "source": "openspec_agents_spec_file_format",
+      "target": "openspec_agents_delta_operations",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "openspec/AGENTS.md",
+      "source_location": "L242",
+      "weight": 1.0,
+      "source": "openspec_agents_critical_scenario_formatting",
+      "target": "openspec_agents_codeblock_8",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "openspec/AGENTS.md",
+      "source_location": "L249",
+      "weight": 1.0,
+      "source": "openspec_agents_critical_scenario_formatting",
+      "target": "openspec_agents_codeblock_9",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "openspec/AGENTS.md",
+      "source_location": "L269",
+      "weight": 1.0,
+      "source": "openspec_agents_delta_operations",
+      "target": "openspec_agents_when_to_use_added_vs_modified",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "openspec/AGENTS.md",
+      "source_location": "L283",
+      "weight": 1.0,
+      "source": "openspec_agents_when_to_use_added_vs_modified",
+      "target": "openspec_agents_codeblock_10",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "openspec/AGENTS.md",
+      "source_location": "L291",
+      "weight": 1.0,
+      "source": "openspec_agents_troubleshooting",
+      "target": "openspec_agents_common_errors",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "openspec/AGENTS.md",
+      "source_location": "L305",
+      "weight": 1.0,
+      "source": "openspec_agents_troubleshooting",
+      "target": "openspec_agents_validation_tips",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "openspec/AGENTS.md",
+      "source_location": "L307",
+      "weight": 1.0,
+      "source": "openspec_agents_validation_tips",
+      "target": "openspec_agents_codeblock_11",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "openspec/AGENTS.md",
+      "source_location": "L320",
+      "weight": 1.0,
+      "source": "openspec_agents_happy_path_script",
+      "target": "openspec_agents_codeblock_12",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "openspec/AGENTS.md",
+      "source_location": "L351",
+      "weight": 1.0,
+      "source": "openspec_agents_multi_capability_example",
+      "target": "openspec_agents_codeblock_13",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "openspec/AGENTS.md",
+      "source_location": "L363",
+      "weight": 1.0,
+      "source": "openspec_agents_multi_capability_example",
+      "target": "openspec_agents_codeblock_14",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "openspec/AGENTS.md",
+      "source_location": "L370",
+      "weight": 1.0,
+      "source": "openspec_agents_multi_capability_example",
+      "target": "openspec_agents_codeblock_15",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "openspec/AGENTS.md",
+      "source_location": "L378",
+      "weight": 1.0,
+      "source": "openspec_agents_best_practices",
+      "target": "openspec_agents_simplicity_first",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "openspec/AGENTS.md",
+      "source_location": "L384",
+      "weight": 1.0,
+      "source": "openspec_agents_best_practices",
+      "target": "openspec_agents_complexity_triggers",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "openspec/AGENTS.md",
+      "source_location": "L390",
+      "weight": 1.0,
+      "source": "openspec_agents_best_practices",
+      "target": "openspec_agents_clear_references",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "openspec/AGENTS.md",
+      "source_location": "L395",
+      "weight": 1.0,
+      "source": "openspec_agents_best_practices",
+      "target": "openspec_agents_capability_naming",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "openspec/AGENTS.md",
+      "source_location": "L401",
+      "weight": 1.0,
+      "source": "openspec_agents_best_practices",
+      "target": "openspec_agents_change_id_naming",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "openspec/AGENTS.md",
+      "source_location": "L417",
+      "weight": 1.0,
+      "source": "openspec_agents_error_recovery",
+      "target": "openspec_agents_change_conflicts",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "openspec/AGENTS.md",
+      "source_location": "L423",
+      "weight": 1.0,
+      "source": "openspec_agents_error_recovery",
+      "target": "openspec_agents_validation_failures",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "openspec/AGENTS.md",
+      "source_location": "L429",
+      "weight": 1.0,
+      "source": "openspec_agents_error_recovery",
+      "target": "openspec_agents_missing_context",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "openspec/AGENTS.md",
+      "source_location": "L437",
+      "weight": 1.0,
+      "source": "openspec_agents_quick_reference",
+      "target": "openspec_agents_stage_indicators",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "openspec/AGENTS.md",
+      "source_location": "L442",
+      "weight": 1.0,
+      "source": "openspec_agents_quick_reference",
+      "target": "openspec_agents_file_purposes",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "openspec/AGENTS.md",
+      "source_location": "L448",
+      "weight": 1.0,
+      "source": "openspec_agents_quick_reference",
+      "target": "openspec_agents_cli_essentials",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "openspec/AGENTS.md",
+      "source_location": "L449",
+      "weight": 1.0,
+      "source": "openspec_agents_cli_essentials",
+      "target": "openspec_agents_codeblock_16",
+      "confidence_score": 1.0
+    }
+  ],
+  "hyperedges": [],
+  "built_at_commit": "1e2c26dfbdd2b27aaa114fb87b5c89d1f6477240"
+}
