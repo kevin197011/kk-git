@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
 require 'json'
-require 'open3'
+require_relative 'git_runner'
 
 module KKGit
   # Generate Conventional Commits messages from git changes.
@@ -211,14 +211,7 @@ module KKGit
     end
 
     def self.run_git(args, repo_dir:)
-      stdout, stderr, status = Open3.capture3('git', *args, chdir: repo_dir)
-      # Open3 stdout/stderr may be ASCII-8BIT (BINARY). Normalize to UTF-8 to avoid concat errors.
-      stdout = stdout.to_s.encode(Encoding::UTF_8, invalid: :replace, undef: :replace, replace: '�')
-      stderr = stderr.to_s.encode(Encoding::UTF_8, invalid: :replace, undef: :replace, replace: '�')
-
-      raise "git #{args.join(' ')} failed: #{stderr.strip}" unless status.success?
-
-      stdout
+      GitRunner.capture!(args, repo_dir: repo_dir)
     end
 
     # Infer type/scope/subject (with optional breaking detection)
@@ -236,17 +229,6 @@ module KKGit
 
     def self.pick_main_type(types)
       types.min_by { |t| TYPE_PRIORITY[t] || 999 } || 'chore'
-    end
-
-    def self.pick_scope(scopes, fallback_scope:)
-      uniq = scopes.compact.uniq
-      return fallback_scope if uniq.empty?
-      return uniq.first if uniq.length == 1
-
-      # When multiple scopes exist, prefer "repo"; otherwise fallback.
-      return 'repo' if uniq.include?('repo')
-
-      fallback_scope
     end
 
     def self.infer_scope(paths, fallback_scope:)
@@ -319,10 +301,14 @@ module KKGit
       return 'chore' if config_path?(path)
       return 'chore' if script_path?(path)
 
-      return 'chore' unless code_path?(path)
+      return default_code_type unless code_path?(path)
 
-      # Default: treat code changes as fix (conservative). Adds are handled as feat by infer_type.
-      'fix'
+      default_code_type
+    end
+
+    def self.default_code_type
+      type = ENV.fetch('KK_GIT_DEFAULT_TYPE', 'chore').to_s.strip
+      TYPE_PRIORITY.key?(type) ? type : 'chore'
     end
 
     def self.doc_path?(path)

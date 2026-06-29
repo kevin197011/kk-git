@@ -15,7 +15,17 @@ def to_utf8(str)
 
   s = str.to_s.dup
   s.force_encoding(Encoding::UTF_8)
-  s.scrub('�')
+  s.scrub("\uFFFD")
+end
+
+def parse_repo_options!(argv)
+  options = { repo_dir: '.' }
+  parser = OptionParser.new do |opts|
+    opts.on('--repo DIR', 'Git repo directory (default: current dir)') { |v| options[:repo_dir] = v }
+    opts.on('-h', '--help', 'Show help') { |v| options[:help] = v }
+  end
+  parser.parse!(argv)
+  options
 end
 
 def run_commit_message!(argv)
@@ -81,15 +91,16 @@ def run_commit_message!(argv)
 end
 
 def run_status!(argv)
-  options = { format: :text }
+  options = { format: :text, repo_dir: '.' }
   parser = OptionParser.new do |opts|
     opts.banner = 'Usage: kk-git status [options]'
+    opts.on('--repo DIR', 'Git repo directory (default: current dir)') { |v| options[:repo_dir] = v }
     opts.on('--format FORMAT', 'Output format: text/json (default: text)') { |v| options[:format] = v.to_s.downcase.to_sym }
     opts.on('-h', '--help', 'Show help') { puts opts; exit 0 }
   end
   parser.parse!(argv)
 
-  hash = KKGit::GitOps.status_hash
+  hash = KKGit::GitOps.status_hash(repo_dir: options[:repo_dir])
   if options[:format] == :json
     puts JSON.pretty_generate(hash)
   else
@@ -102,31 +113,35 @@ def run_status!(argv)
 end
 
 def run_sync!(argv)
-  parser = OptionParser.new do |opts|
-    opts.banner = 'Usage: kk-git sync [options]'
-    opts.on('-h', '--help', 'Show help') { puts opts; exit 0 }
+  options = parse_repo_options!(argv)
+  if options[:help]
+    puts 'Usage: kk-git sync [--repo DIR]'
+    exit 0
   end
-  parser.parse!(argv)
 
+  repo_dir = options[:repo_dir]
   remote = KKGit::GitOps.remote
-  branch = KKGit::GitOps.branch
-  s = KKGit::GitOps.status(remote: remote, branch: branch)
+  branch = KKGit::GitOps.branch(repo_dir: repo_dir)
+  s = KKGit::GitOps.status(remote: remote, branch: branch, repo_dir: repo_dir)
 
   if s.needs_sync?
-    KKGit::GitOps.sync_with_remote!(remote, branch)
+    KKGit::GitOps.sync_with_remote!(remote, branch, repo_dir: repo_dir)
   else
     puts 'Already in sync with remote'
   end
 end
 
 def run_push!(argv)
-  parser = OptionParser.new do |opts|
-    opts.banner = 'Usage: kk-git push [options]'
-    opts.on('-h', '--help', 'Show help') { puts opts; exit 0 }
+  options = parse_repo_options!(argv)
+  if options[:help]
+    puts 'Usage: kk-git push [--repo DIR]'
+    exit 0
   end
-  parser.parse!(argv)
 
-  KKGit::GitOps.auto_commit_push!
+  KKGit::GitOps.auto_commit_push!(repo_dir: options[:repo_dir])
+rescue KKGit::GitOps::Error => e
+  warn e.message
+  exit 1
 end
 
 def main_help
@@ -149,6 +164,9 @@ def main_help
       KK_GIT_SKIP_PULL=1  skip pull step
       KK_GIT_SKIP_PUSH=1  skip push step
       KK_GIT_AMEND=1      amend last commit instead of creating new one
+      KK_GIT_CONFIRM=1    print message and require KK_GIT_YES=1
+      KK_GIT_ALLOW_SENSITIVE=1  allow committing .env/credentials paths
+      KK_GIT_DEFAULT_TYPE  default type for code edits (default: chore)
 
     Run `kk-git <command> --help` for command-specific options.
   HELP

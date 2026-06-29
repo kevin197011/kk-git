@@ -38,6 +38,7 @@ kk-git status                      # 查看分支同步状态
 kk-git status --format json        # JSON 输出
 kk-git sync                        # 仅 pull + push（不 commit）
 kk-git push                        # 完整 auto add/commit/pull/push
+kk-git push --repo /path/to/repo   # 指定仓库目录
 ```
 
 Run from this repo (without installing the gem):
@@ -111,6 +112,9 @@ Execution order:
 | `KK_GIT_SKIP_PULL` | — | Set to `1` to skip pull |
 | `KK_GIT_SKIP_PUSH` | — | Set to `1` to skip push |
 | `KK_GIT_AMEND` | — | Set to `1` to amend last commit |
+| `KK_GIT_CONFIRM` | — | Set to `1` to print message and require `KK_GIT_YES=1` |
+| `KK_GIT_ALLOW_SENSITIVE` | — | Set to `1` to allow committing `.env`/credentials paths |
+| `KK_GIT_DEFAULT_TYPE` | `chore` | Default type for code edits (non-add) |
 
 ### Commit message overrides
 
@@ -145,7 +149,12 @@ KKGit::GitOps.sync_with_remote!('origin', 'main')
 - **非 git 目录**: 操作前会检测并报错
 - **首次 push**: 无 upstream 时自动使用 `git push -u`
 - **pull 冲突**: `--ff-only` 失败时会抛出错误，需手动解决后重试
-- **敏感文件**: 可用 `KK_GIT_ADD_PATHS="src spec"` 避免 `git add .` 误加文件
+- **敏感文件**: 默认拒绝 commit `.env`、credentials、`.pem` 等；可用 `KK_GIT_ADD_PATHS="src spec"` 限制 add 范围
+- **确认提交**: `KK_GIT_CONFIRM=1` 时打印 message，需 `KK_GIT_YES=1` 才会真正 commit
+
+## Maintainer (this repo)
+
+Root `Rakefile` delegates to `KKGit::GitOps` (same as `kk-git push`). By default it also bumps `lib/kk/git/version.rb` and pushes a release tag (`KK_GIT_AUTO_TAG=1`). Disable auto-tag with `KK_GIT_AUTO_TAG=0`.
 
 ## Test
 

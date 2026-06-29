@@ -67,6 +67,9 @@ module KKGit
           end
 
           KKGit::GitOps.auto_commit_push!(commit_message_generator: generator)
+        rescue KKGit::GitOps::Error => e
+          warn e.message
+          exit 1
         end
       end
     end
